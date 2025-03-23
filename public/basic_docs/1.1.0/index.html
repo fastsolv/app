@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ticketing Expert Installation Documentation</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Ticketing Expert Installation Documentation">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head>
+
+<body class="docs-page">
+    <header class="header fixed-top">
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible mr-2 d-xl-none"
+                        type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-logo"><a class="navbar-brand" href="https://ticketing.expert/">Ticketing Expert</a></div>
+                </div>
+                <!--//docs-logo-wrapper-->
+                <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+                    <div class="mr-4 d-none d-md-flex">
+                        <span class="mt-2"><a href="user-doc.html">Go to user documentation <i
+                                    class="fas fa-arrow-circle-right"></i></a></span>
+                    </div>
+                    <div class="mr-1 d-flex d-md-none">
+                        <span class="mt-3 text-center" style="font-size:x-small;"><a href="user-doc.html">Go to user
+                                <br> documentation <i class="fas fa-arrow-circle-right"></i></a></span>
+                    </div>
+                    <a href="https://ticketing.expert/"
+                        class="btn btn-sm btn-primary d-none d-sm-flex">Home</a>
+                </div>
+                <!--//docs-top-utilities-->
+            </div>
+            <!--//container-->
+        </div>
+        <!--//branding-->
+    </header>
+    <!--//header-->
+
+    <div class="docs-wrapper">
+        <div id="docs-sidebar" class="docs-sidebar">
+            <nav id="docs-nav" class="docs-nav navbar">
+                <ul class="section-items list-unstyled nav flex-column pb-3">
+                    <li class="nav-item section-title"><a class="nav-link scrollto" href=""><span
+                                class="theme-icon-holder mr-2"><i class="fas fa-desktop"></i></span>Installation
+                            Doc</a>
+                    </li>
+                    <hr>
+                    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
+                                class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span>1.
+                            Introduction</a></li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span
+                                class="theme-icon-holder mr-2"><i class="fab fa-cpanel"></i></span>2. Installation Using
+                            cPanel</a></li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span
+                                class="theme-icon-holder mr-2"><i class="fas fa-terminal"></i></span>3. Installation
+                            Using Terminal</a></li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
+                                class="theme-icon-holder mr-2"><i class="fas fa-fire"></i></span>4. Local
+                            Installation</a></li>
+
+                </ul>
+
+            </nav>
+            <!--//docs-nav-->
+        </div>
+        <!--//docs-sidebar-->
+        <div class="docs-content">
+            <div class="container">
+                <article class="docs-article" id="section-1">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Introduction <span class="docs-time">Last updated: 2021-09-10</span>
+                        </h1>
+                        <section class="docs-intro">
+                            <p>This document explains the installation of Ticketing Expert.
+                        Installation using cPanel is possible only if you have cPanel in your server.
+                        If you have a VPS or Dedicated server, then can install using terminal.</p>
+                        </section>
+                    </header>
+
+                    <section class="docs-section" id="item-1-2">
+                        <h2 class="section-heading">Requirements</h2>
+                        <p>
+                            Your PHP version should be >= 7.4 for this app to work.
+                            You must set up two cron scripts.
+                            1) For importing emails uisng imap
+                            2) To process Queue Jobs
+                            Details of those are given in this document.
+                        </p>
+
+                        <!-- <h5>Image Lightbox Example:</h5>
+                        <figure class="figure docs-figure py-3">
+                            <a href="assets/images/dashboard-user.png" data-title="Image Lightbox Example"
+                                data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+                                    src="assets/images/dashboard-user.png" alt="" style="width: 600px;"></a>
+                            <figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+                                Fig.2.1 caption
+                            </figcaption>
+                        </figure> -->
+
+
+                    </section>
+                    <!--//section-->
+
+                </article>
+
+                <article class="docs-article" id="section-2">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">2. Installation Using cPanel</h1>
+                        <section class="docs-intro">
+                            <p>Note: This document explains the installation of Ticketing Expert using cPanel.</p>
+                        </section>
+
+                    </header>
+                    <section class="docs-section" id="item-2-1">
+                        <h2 class="section-heading">Step 1: Selection of domain</h2>
+                        <p>First login to cPanel and you will see options as shown below. <br>
+
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/domain-setup(1).png"
+                                    data-title="Domain Setup - Step-1" data-toggle="lightbox"><img
+                                        class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/domain-setup(1).png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.1 Domain Setup - Step-1
+                                </figcaption>
+                            </figure>
+                            <br>
+
+                            You can install this app using any domain or subdomain. <br>
+
+                            You just have to select the domain if it’s already there or create a subdomain.
+                            In both cases the document root should be like <br>
+
+                            &#60;somepath&#62;/public <br>
+
+                            In our example installation domain is <a class="text-link" target="_blank"
+                                href="http://statuskart.com">http://statuskart.com</a> <br>
+
+                            and document root is /home/kycdyuvx/statuskart.com/public <br>
+                            Note that the public should be at the end of the document root
+                            /home/kycdyuvx/statuskart.com/<b>public</b> <br> <br>
+
+                            If you are installing under a subdomain, click on the subdomains link.(see the below image)
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3" id="fig.2.2">
+                                <a href="assets/images/installation/domain-setup(2).png"
+                                    data-title="Domain Setup - Step-2" data-toggle="lightbox"><img
+                                        class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/domain-setup(2).png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.2 Domain Setup - Step-2
+                                </figcaption>
+                            </figure>
+                            <br>
+
+                            That will show a new window as shown below,
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/domain-setup(3).png"
+                                    data-title="Domain Setup - Step-3" data-toggle="lightbox"><img
+                                        class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/domain-setup(3).png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.3 Domain Setup - Step-3
+                                </figcaption>
+                            </figure>
+                            <br>
+
+                            There you can enter the subdomain name. You have to select the domain and should enter the
+                            document root. <br>
+                            The /public at the end of the document root is required as in the picture. <br> <br>
+
+
+                            If you are going to use an existing domain, click on the domains link in <a class="scrollto"
+                                href="#fig.2.2">Fig.2.2</a> <br>
+                            That will show a list of domains as shown below.
+
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/domain-setup(4).png"
+                                    data-title="Domain Setup - Step-4" data-toggle="lightbox"><img
+                                        class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/domain-setup(4).png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.4 Domain Setup - Step-4
+                                </figcaption>
+                            </figure>
+                            <br>
+                            Then click manage button of the domain that you wish to choose. That will show a window as
+                            shown below.
+
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/domain-setup(5).png"
+                                    data-title="Domain Setup - Step-5" data-toggle="lightbox"><img
+                                        class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/domain-setup(5).png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.5 Domain Setup - Step-5
+                                </figcaption>
+                            </figure>
+                            <br>
+
+                            Here you can edit your document root under "New Document Root" section.
+
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/domain-setup(6).png"
+                                    data-title="Domain Setup - Step-6" data-toggle="lightbox"><img
+                                        class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/domain-setup(6).png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.6 Domain Setup - Step-6
+                                </figcaption>
+                            </figure>
+                            <br>
+                            Make sure that the document root ends with <b>/public</b>. Then you can save the changes
+                            using update button.
+                        </p>
+                    </section>
+                    <!--//docs-intro-->
+                    <section class="docs-section" id="item-2-2">
+                        <h2 class="section-heading">Step 2: Upload files</h2>
+                        <p>
+                            The next step is uploading the files to the server. <br>
+                            Hope you already know the FTP details of your server and document root. <br>
+                            Once you extracted the code you purchased, it’s folder structure will be as shown below.
+
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/upload-files(1).png"
+                                    data-title="Upload files - Step-1" data-toggle="lightbox"><img
+                                        class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/upload-files(1).png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.7 Upload files - Step-1
+                                </figcaption>
+                            </figure>
+                            <br>
+                            Now open the src folder from the extracted file. It contains the files and folders as shown
+                            below
+
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/upload-files(2).png"
+                                    data-title="Upload files - Step-2" data-toggle="lightbox"><img
+                                        class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/upload-files(2).png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.8 Upload files - Step-2
+                                </figcaption>
+                            </figure>
+                            <br>
+                            We need to upload those files to the server using FTP.
+
+                            After connecting to the FTP server, You will see the files in src folder on the left hand
+                            side of the window
+                            and the server folder on the right hand side of the window.
+
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/upload-files(3).png"
+                                    data-title="Upload files - Step-3" data-toggle="lightbox"><img
+                                        class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/upload-files(3).png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.9 Upload files - Step-3
+                                </figcaption>
+                            </figure>
+                            <br>
+
+                            One important point is that, even though our document root is
+                            /home/kycdyuvx/statuskart.com/public, <br>
+
+                            we are not going to upload the files to /home/kycdyuvx/statuskart.com/public folder, <br>
+                            but we are uploading the files to /home/kycdyuvx/statuskart.com/ folder
+
+                            After all the files are uploaded, the window will looks like the picture below.
+
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/upload-files(4).png"
+                                    data-title="Upload files - Step-4" data-toggle="lightbox"><img
+                                        class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/upload-files(4).png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.9 Upload files - Step-4
+                                </figcaption>
+                            </figure>
+                            <br>
+                        </p>
+
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-2-3">
+                        <h2 class="section-heading">Step 3: Change the permission of storage folder</h2>
+                        <p>
+                            Now we need to change the permission of storage folder. For that, select the storage folder
+                            from the remote folder
+
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/sorage-permission(1).png"
+                                    data-title="Storage permission setup - Step-1" data-toggle="lightbox"><img
+                                        class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/sorage-permission(1).png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.10 Storage permission setup - Step-1
+                                </figcaption>
+                            </figure>
+                            <br>
+
+                            Then give 775 permission as shown below
+
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/sorage-permission(2).png"
+                                    data-title="Storage permission setup - Step-2" data-toggle="lightbox"><img
+                                        class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/sorage-permission(2).png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.11 Storage permission setup - Step-2
+                                </figcaption>
+                            </figure>
+                            <br>
+
+                        </p>
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-2-4">
+                        <h2 class="section-heading">Step 4: Database setup</h2>
+
+                        <p>
+                            Now you need to create a database and a user and assign it.
+
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/db-setup(1).png" data-title="Database Setup"
+                                    data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/db-setup(1).png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.12 Database Setup
+                                </figcaption>
+                            </figure>
+                            <br>
+
+                            First, create a new database for the application as shown below.
+
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/db-setup(2).png" data-title="Creating a database"
+                                    data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/db-setup(2).png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.13 Database creation
+                                </figcaption>
+                            </figure>
+                            <br>
+                            After creating a data base, you also need to create a user as shown below.
+
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/db-setup(3).png" data-title="User creation"
+                                    data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/db-setup(3).png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.14 User creation
+                                </figcaption>
+                            </figure>
+                            <br>
+                            So we created <br>
+                            a user: kycdyuvx_mz <br>
+                            and a database: kycdyuvx_mz <br>
+
+                            Now add the user to the database.
+
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/db-setup(4).png"
+                                    data-title="Adding user to database" data-toggle="lightbox"><img
+                                        class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/db-setup(4).png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.15 Adding user to database
+                                </figcaption>
+                            </figure>
+                            <br>
+                            After that, give all the permissions by checking "ALL PRIVILEGES" checkbox as below.
+
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/db-setup(5).png" data-title="Allow permissions"
+                                    data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/db-setup(5).png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.16 Allow permissions
+                                </figcaption>
+                            </figure>
+                            <br>
+                            After these steps are completed, take the domain URL. It will be redirected to the
+                            installation page.
+                        </p>
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-2-5">
+                        <h2 class="section-heading">Step 5: Install IMAP Extension</h2>
+                        <p>
+                            In order to work Email piping, php imap extension should be installed. <br>
+                            You can refer the below link to install php imap extension using cPanel. <br>
+                            Refer : <a class="text-link" target="_blank"
+                                href="https://manage.accuwebhosting.com/knowledgebase/2331/How-to-EnableorDisable-PHP-Extensions-From-cPanel.html">Install
+                                php imap extension using cPanel</a>
+                        </p>
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-2-6">
+                        <h2 class="section-heading">Step 6: Installation using installer</h2>
+
+                        <p>
+                            Now you have to install the Ticketing Expert using the installer. For that take the domain
+                            URL and it will be redirected to a page as shown below.
+
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/installer.png" data-title="Installer"
+                                    data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/installer.png" alt="" style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.17 Installer
+                                </figcaption>
+                            </figure>
+                            <br>
+                            In the next step, you need to provide the database details as below.
+
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/installer-step1.png" data-title="Database details"
+                                    data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/installer-step1.png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.18 Database details
+                                </figcaption>
+                            </figure>
+                            <br>
+                            After filling the correct db details, It will be redirected to requirement checking page in
+                            the next step as shown below. If there any requirement is left, you have to install it.
+
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/installer-step2.png" data-title="Requirements check"
+                                    data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/installer-step2.png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.19 Requirements check
+                                </figcaption>
+                            </figure>
+                            <br>
+
+                            After checking the requirements, you have to provide the right permissions in the next step.
+
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/installer-step3.png" data-title="Permission check"
+                                    data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/installer-step3.png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.20 Permission check
+                                </figcaption>
+                            </figure>
+                            <br>
+                            If you are using cPanel installation, for providing missing right permissions, select the
+                            corresponding folders as shown below. <br>
+                            Otherwise run the following commands from your root folder. <br>
+                            <code>chmod -R 777 storage/*</code> <br>
+                            <code>chmod -R 777 bootstrap/cache</code>
+
+                            <br>
+                            <br>
+                            <h5>For cPanel installation:</h5>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/installer-permission(1).png"
+                                    data-title="Permission setup for bootstrap/cache folder" data-toggle="lightbox"><img
+                                        class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/installer-permission(1).png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.21 Permission setup for bootstrap/cache folder
+                                </figcaption>
+                            </figure>
+                            <br>
+                            After that, give 775 permissions for all required folders. Then proceed with the
+                            installation.
+
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/installer-permission(2).png"
+                                    data-title="Give 775 permissions" data-toggle="lightbox"><img
+                                        class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/installer-permission(2).png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.22 Give 775 permissions
+                                </figcaption>
+                            </figure>
+                            <br>
+                        </p>
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-2-7">
+                        <h2 class="section-heading">Step 7: Cron setup</h2>
+
+                        <p>
+                            Now you need to setup the cron for importing latest emails to the Ticketing expert. For that
+                            take the "Cron jobs" from cPanel.
+
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/cron-setup(1).png" data-title="Cron setup - Step-1"
+                                    data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/cron-setup(1).png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.23 Cron setup - Step-1
+                                </figcaption>
+                            </figure>
+                            <br>
+                            Then click an add new cron button. On the displayed window, From "Common Settings", select
+                            "Once Per Five Minutes" and fill other fields as shown below.
+
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/cron-setup(2).png" data-title="Cron setup - Step-2"
+                                    data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/cron-setup(2).png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.24 Cron setup - Step-2
+                                </figcaption>
+                            </figure>
+                            <br>
+
+                            Our command to add to the cron is <br>
+                            <code>/usr/local/bin/php/home/kycdyuvx/statuskart.com/artisan schedule:run >> /dev/null
+                                2>&1"</code> <br>
+
+                            /home/kycdyuvx/statuskart.com/ is the path to the application <br>
+
+
+                            So add <code>/usr/local/bin/php/home/kycdyuvx/statuskart.com/artisan schedule:run >>
+                                /dev/null 2>&1"</code> as the command. <br>
+
+
+                            Then you will see
+
+                            <br>
+                            <br>
+                            <figure class="figure docs-figure py-3">
+                                <a href="assets/images/installation/cron-setup(3).png" data-title="Cron setup - Step-3"
+                                    data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+                                        src="assets/images/installation/cron-setup(3).png" alt=""
+                                        style="width: 600px;"></a>
+                                <figcaption class="figure-caption text-center mt-3"><i
+                                        class="fas fa-info-circle mr-2"></i>
+                                    Fig.2.24 Cron setup - Step-3
+                                </figcaption>
+                            </figure>
+                            <br>
+                        </p>
+                        <p>
+
+                        We have to add one more command to the cron, That should be run in every one minutes.
+                        Command to be added to the cron is
+                        <code>/usr/local/bin/php/home/kycdyuvx/statuskart.com/artisan queue:work --stop-when-empty</code> <br/>
+                        </p>
+                    </section>
+                    <!--//section-->
+                </article>
+                <!--//docs-article-->
+
+
+                <article class="docs-article" id="section-3">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">3. Installation Using Terminal</h1>
+                        <section class="docs-intro">
+                            <p>Note: This document explains the installation of Ticketing Expert on a subdomain
+                                demo.modulespanel.com. So, you have to replace <span
+                                    class="red-text">demo.modulespanl.com</span> mentioned in
+                                each installation steps with your subdomain.
+                                In each step, we have marked the demo.modulespanl.com subdomain in red color. So,
+                                you have to replace demo.modulespanl.com in red color with your subdomain.</p>
+                        </section>
+                    </header>
+                    <section class="docs-section" id="item-3-1">
+                        <h2 class="section-heading">Step 1: Document root set-up</h2>
+
+                        <br>
+                        <p>
+                            It’s better to install the Laravel app on a web server. You can create a sub domain for
+                            this. <br>
+                            Eg: <span class="red-text">demo.modulespanl.com</span> Then you have to set up a
+                            document root for this domain. <br>
+                            Document root should be something like /var/www/<span
+                                class="red-text">demo.modulespanl.com</span>/public/ <br>
+                            If you are using apache2, you have to create a virtual host for that. For that you have
+                            to
+                            create a file like
+                            /etc/apache2/sites-available/<span class="red-text">demo.modulespanl.com</span>.conf.
+                            <br>
+                            Content within your Virtual-Host tag of the page will be something like
+                        </p><b>
+                            <div class="ml-5">
+
+                                <code>
+                                    &#60;VirtualHost *:80&#62; <br></code>
+                                <div class="ml-4">
+                                    <code>
+                                        &#60;Directory /var/www/<span
+                                            class="red-text">demo.modulespanl.com</span>/public&#62; <br></code>
+                                    <div class="ml-4">
+                                        <code>
+                                            Options Indexes FollowSymLinks MultiViews <br>
+                                            AllowOverride All <br>
+                                            Require all granted <br></code>
+                                    </div>
+                                    <code>
+                                        &#60;/Directory&#62; <br>
+                                        ServerAdmin webmaster@localhost <br>
+                                        ServerName <span class="red-text">demo.modulespanl.com</span> <br>
+                                        ServerAlias <span class="red-text">demo.modulespanl.com</span> <br>
+                                        DocumentRoot /var/www/<span class="red-text">demo.modulespanl.com</span>/public/
+                                        <br>
+                                        ErrorLog ${APACHE_LOG_DIR}/error.log <br>
+                                        CustomLog ${APACHE_LOG_DIR}/access.log combined <br>
+                                        RewriteEngine on <br>
+                                        RewriteCond %{SERVER_NAME} =<span class="red-text">demo.modulespanl.com</span>
+                                        <br>
+                                        RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} <br>
+                                        END,NE,R=permanent] <br></code>
+                                </div>
+                                <code>&#60;/VirtualHost&#62;</code>
+                            </div>
+                        </b>
+                        </code>
+                        <p>
+                            <br>Here you can see that we defined Server Name <span
+                                class="red-text">demo.modulespanl.com</span> and Document
+                            Root <br> /var/www/<span class="red-text">demo.modulespanl.com</span>/public/
+                            <br><br>For more details on webserver
+                            set up, you can visit following links. <br><br>
+                            <b>Linux webserver installation.</b><br>
+                            &emsp;&emsp;<a class="text-link" target="_blank"
+                                href="https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-18-04-quickstart">Webserver
+                                set-up for Linux</a><br><br>
+                            <b>Windows webserver installation.</b> <br>
+                            &emsp;&emsp;<a class="text-link" target="_blank"
+                                href="https://www.znetlive.com/blog/how-to-install-apache-php-and-mysql-on-windows-10-machine/">Webserver
+                                set-up for Windows</a><br><br>
+                            <b>Mac Webserver installation.</b><br>
+                            &emsp;&emsp;<a class="text-link" target="_blank"
+                                href="https://www.webucator.com/article/how-to-install-start-and-test-mamp-on-mac-osx/">Webserver
+                                set-up for Mac OS</a>
+                        </p>
+                    </section>
+                    <!--//docs-intro-->
+
+                    <section class="docs-section" id="item-3-2">
+                        <h2 class="section-heading">Step 2: Enable the subdomain</h2>
+
+                        <p>Then enable the subdomain using the below command. <br>
+                            <code>a2ensite demo.modulespanel.com.conf</code> <br>
+                            <code>sudo /etc/init.d/apache2 restart</code></p>
+                        </p>
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-3-3">
+                        <h2 class="section-heading">Step 3: Unzip your files</h2>
+
+                        <p>Then you have to unzip the project file you purchased. There will be two folders named as
+                            src and docs. First you have to upload the files in src folder
+                            to
+                            the folder, /var/www/<span class="red-text">demo.modulespanl.com</span>. <br>
+                            Once you uploaded the files, make sure that you have folders like <br>
+                            /var/www/<span class="red-text">demo.modulespanl.com</span>/app/ <br>
+                            /var/www/<span class="red-text">demo.modulespanl.com</span>/database/ <br>
+                            /var/www/<span class="red-text">demo.modulespanl.com</span>/public/</p>
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-3-4">
+                        <h2 class="section-heading">Step 4: Install php-imap</h2>
+
+                        <p>
+                            <b>Linux installation.</b><br>
+                            We need php-imap for importing tickets from email. You can install it using the
+                            below command. <br>
+                            <code>sudo apt-get install php-imap</code> <br>
+                            <code>sudo phpenmod imap</code> <br>
+                            Then restart your webserver.<br><br>
+                            <b>Windows installation.</b> <br>
+                            You need to configure your php.ini file to enable IMAP extension. <br>
+                            To locate the php.ini file path refer link : <a class="text-link" target="_blank"
+                                href="https://code.tutsplus.com/tutorials/introduction-to-the-php-configuration-file-phpini--cms-34452">Locate
+                                php.ini</a><br>
+                            Search for the line <code>;extension=php_imap.dll</code> and remove semicolon( ; ). <br>
+                            The line should look like as mentioned below. <br>
+                            <code>extension=php_imap.dll</code> <br>
+                            Then restart your webserver. <br><br>
+                            <b>Mac OS installation.</b><br>
+                            First of all, make sure that you have installed brew on your system. If not, please
+                            install brew by <br>
+                            referring the link : <a class="text-link" target="_blank"
+                                href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-homebrew-on-macos">Install
+                                and Use Homebrew on macOS</a><br>
+                            Now you can install php-imap using the below commands on Mac OS. <br>
+                            <code>brew tap kabel/php-ext</code> <br>
+                            <code>brew install php-imap</code> <br>
+                            Then restart your webserver. <br>
+                            For more details : <a class="text-link" target="_blank"
+                                href="https://izziswift.com/adding-imap-to-php-7-2-on-osx/">IMAP Mac OS installation</a>
+                        </p>
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-3-5">
+                        <h2 class="section-heading">Step 5: Permission settings</h2>
+
+                        <p>In order to change the permissions, run the below commands from the terminal <br>
+                            <code>cd /var/www/<span class="red-text">demo.modulespanl.com</span></code> <br>
+                            <code>chmod -R 777 storage/*</code> <br>
+                            <code>chmod -R 777 bootstrap/cache</code></p>
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-3-6">
+                        <h2 class="section-heading">Step 6: Clear cache</h2>
+
+                        <p>Now run the following commands <br>
+                            <code>php artisan key:generate</code> <br>
+                            <code>php artisan cache:clear</code> <br>
+                            <code>php artisan config:clear</code></p>
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-3-7">
+                        <h2 class="section-heading">Step 7: Scheduler Set up</h2>
+
+                        <p>You have to run the below commands from the root folder of your Laravel application <br>
+                            <code>php artisan schedule:run</code>
+                            to import latest emails to the Ticketing expert. <br>When you run <code>php artisan
+                                schedule:run</code>,
+                            it will import the latest emails.
+                            Then if you run it again after 10 minutes, it will import the emails came within the last 10
+                            minutes. The above step will work in Linux, OSX and Windows. <br>
+                            If you are using Linux or OSX, You can use crontab instead of running the above command.
+                            For that, run the below commands.
+                            <code>crontab -e</code> <br>
+                            then add the line <br>
+                            Then the scheduler will run in each 5 minutes. <br><br>
+                            Also add queue worker to the cron, which will run in every one minute.
+
+                            So the two cron commands are <br/>
+
+                            <code>*/5 * * * * cd /var/www/<span class="red-text">demo.modulespanl.com</span> && php
+                                artisan schedule:run
+                                >> /dev/null 2>&1</code><br>
+                            <code>*/1 * * * * cd /var/www/<span class="red-text">demo.modulespanl.com</span> && php
+                                artisan queue:work --stop-when-empty</code><br>
+
+                            After these steps are completed, take the domain URL. It will be redirected to the
+                            installation page.
+                        </p>
+                    </section>
+                    <!--//section-->
+
+
+                    <section class="docs-section" id="item-3-8">
+                        <h2 class="section-heading">Step 8: Installation using installer:</h2>
+
+                        <p>
+                            After these steps are completed, you will be redirected to the installation page.
+                            Press below link or refer step-6 of section-2 for more about the installation using
+                            installer. <br>
+                            Refer: <a class="scrollto" href="#item-2-6"><u>Installation using installer</u> </a>
+                            <br><br>
+                            <b>NOTE:</b> Please contact us if you face any issue with the installation. Also we provide
+                            paid installation. <br>
+                            Please refer the <a class="text-link" target="_blank" href="user-doc.html">User
+                                Documentation </a> to learn about using the application.</p>
+                    </section>
+                    <!--//section-->
+                </article>
+
+                <article class="docs-article" id="section-4">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">4. Local Installation</h1>
+                        <section>
+
+                            <p>
+                                Note: This document explains the installation of Ticketing Expert in your local machine.
+                                <br>
+                                Assuming that you have already installed PHP, Apache and MySQL in your local machine. If
+                                not,please install any webserver by going through the below links. Installation depends
+                                on your OS, so use the links given for your OS. <br><br>
+                                <b>Linux webserver installation.</b><br>
+                                &emsp;&emsp;<a class="text-link" target="_blank"
+                                    href="https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04">Webserver
+                                    set-up for Linux (Link 1).</a> OR<br>
+                                &emsp;&emsp;<a class="text-link" target="_blank"
+                                    href="https://phoenixnap.com/kb/how-to-install-xampp-on-ubuntu">Webserver
+                                    set-up for Linux (Link 2).</a><br><br>
+                                <b>Windows webserver installation.</b> <br>
+                                &emsp;&emsp;<a class="text-link" target="_blank"
+                                    href="https://www.geeksforgeeks.org/how-to-install-xampp-on-windows/">Webserver
+                                    set-up for Windows</a><br><br>
+                                <b>Mac Webserver installation.</b><br>
+                                &emsp;&emsp;<a class="text-link" target="_blank"
+                                    href="https://www.webucator.com/article/how-to-install-start-and-test-mamp-on-mac-osx/">Webserver
+                                    set-up for Mac OS</a>
+                            </p>
+                        </section>
+                        <!--//docs-intro-->
+                    </header>
+                    <section class="docs-section" id="item-4-1">
+                        <h2 class="section-heading">Step 1: Unzip your files</h2>
+
+                        <p>First unzip the purchased Ticketing Expert zip file in a folder. Go to the src folder in
+                            unzipped file,
+                            there you see folders like
+                            app, config, public, routes, vendor etc. <br>
+                            And files like .env , server.php, User_guide.pdf etc. <br>
+                            We assume that, the code is extracted(unzipped) to a folder
+                            /home/user/ticketing_expert . (In this case, this is your root folder of the Laravel
+                            application)</p>
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-4-2">
+                        <h2 class="section-heading">Step 2: Install php-imap</h2>
+
+                        <p>
+                            <b>Linux installation.</b><br>
+                            We need php-imap for importing tickets from email. You can install it using the
+                            below command. <br>
+                            <code>sudo apt-get install php-imap</code> <br>
+                            <code>sudo phpenmod imap</code> <br>
+                            Then restart your webserver.<br><br>
+                            <b>Windows installation.</b> <br>
+                            You need to configure your php.ini file to enable IMAP extension. <br>
+                            To locate the php.ini file path refer link : <a class="text-link" target="_blank"
+                                href="https://code.tutsplus.com/tutorials/introduction-to-the-php-configuration-file-phpini--cms-34452">Locate
+                                php.ini</a><br>
+                            Search for the line <code>;extension=php_imap.dll</code> and remove semicolon( ; ). <br>
+                            The line should look like as mentioned below. <br>
+                            <code>extension=php_imap.dll</code> <br>
+                            Then restart your webserver. <br><br>
+                            <b>Mac OS installation.</b><br>
+                            First of all, make sure that you have installed brew on your system. If not, please
+                            install brew by <br>
+                            referring the link : <a class="text-link" target="_blank"
+                                href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-homebrew-on-macos">Install
+                                and Use Homebrew on macOS</a><br>
+                            Now you can install php-imap using the below commands on Mac OS. <br>
+                            <code>brew tap kabel/php-ext</code> <br>
+                            <code>brew install php-imap</code> <br>
+                            Then restart your webserver. <br>
+                            For more details : <a class="text-link" target="_blank"
+                                href="https://izziswift.com/adding-imap-to-php-7-2-on-osx/">IMAP Mac OS installation</a>
+                        </p>
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-4-3">
+                        <h2 class="section-heading">Step 3: Permission settings</h2>
+
+                        <p>In order to change the permissions, run the below commands from the root folder of your
+                            Laravel application. <br>
+                            <code>cd /home/user/<span class="red-text">ticketing_expert</span></code> <br>
+                            <code>chmod -R 777 storage/*</code> <br>
+                            <code>chmod -R 777 bootstrap/cache</code></p>
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-4-4">
+                        <h2 class="section-heading">Step 4: Clear cache</h2>
+
+                        <p>Now run the following commands from the root folder of your Laravel application . <br>
+                            <code>php artisan key:generate</code> <br>
+                            <code>php artisan cache:clear</code> <br>
+                            <code>php artisan config:clear</code></p>
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-4-5">
+                        <h2 class="section-heading">Step 5: Scheduler Set up</h2>
+
+                        <p>You have to run the below commands from the root folder of your Laravel application <br>
+                            <code>php artisan schedule:run</code>
+                            to import latest emails to the Ticketing expert. <br>When you run <code>php artisan
+                                schedule:run</code>,
+                            it will import the latest emails.
+                            Then if you run it again after 10 minutes, it will import the emails came within the last 10
+                            minutes. <br>
+                            So, you have to run this command to import emails using IMAP.
+
+
+
+                            <p>
+                            Run <code>php artisan queue:work --stop-when-empty</code> in another tab
+                            Whenever you add/edit department with IMAP details, also when you reply to a
+                            IMAP ticket. In server,  those should be added to cron, then you don't
+                            have to worry about those commands.
+                            </p>
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-4-6">
+                        <h2 class="section-heading">Step 6: Start application:</h2>
+
+                        <p>Then you can start the application <br>
+                            For that open a new tab in terminal and run the below commands from the root folder of
+                            your Laravel application <br>
+                            <code>php artisan serve</code> <br>
+                            Then you will see some output like <br>
+                            Starting Laravel development server: <a class="text-link" target="_blank"
+                                href="http://127.0.0.1:8000">http://127.0.0.1:8000.</a> <br>
+                            You can open this URL in any browser.
+                    </section>
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-4-7">
+                        <h2 class="section-heading">Step 7: Installation using installer:</h2>
+
+                        <p>
+                            After these steps are completed, you will be redirected to the installation page.
+                            Press below link or refer step-6 of section-2 for more about the installation using
+                            installer. <br>
+                            Refer: <a class="scrollto" href="#item-2-6"><u>Installation using installer</u> </a>
+                            <br><br>
+                            <b>NOTE:</b> Please contact us if you face any issue with the installation. Also we provide
+                            paid installation. <br>
+                            Please refer the <a class="text-link" target="_blank" href="user-doc.html">User
+                                Documentation </a> to learn about using the application.</p>
+                    </section>
+                    <!--//section-->
+                </article>
+                <!--//docs-article-->
+
+                <footer class="footer">
+                    <div class="container text-center py-5">
+                        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+                        <small class="footer-left">
+                            Copyright &copy; 2020 <div class="bullet"></div> A product from <a
+                                href="https://modulespanel.com/">Modulespanel.com</a>
+                        </small>
+                        <br>
+                        <small class="footer-right">
+                            TE 1.1.0
+                        </small>
+                        <!--//social-list-->
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <!--//docs-wrapper-->
+
+
+
+    <!-- Javascript -->
+    <script src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+    <!-- Page Specific JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script>
+    <script src="assets/plugins/jquery.scrollTo.min.js"></script>
+    <script src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>
+    <script src="assets/js/docs.js"></script>
+
+</body>
+
+</html>

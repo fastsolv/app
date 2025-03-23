@@ -1,0 +1,49 @@
+.container {
+    margin-top: 40px !important;
+}
+
+.panel-heading {
+    display: inline !important;
+    font-weight: bold !important;
+}
+
+.flex-table {
+    display: table !important;
+}
+
+.display-tr {
+    display: table-row !important;
+}
+
+.display-td {
+    display: table-cell !important;
+    vertical-align: middle !important;
+    width: 55% !important;
+}
+
+.display-mollie-img {
+    height: 40px !important;
+    margin: 25px !important;
+}
+
+.bg-dark {
+    background-color: #343a40 !important;
+    color: #ffffff
+}
+
+.bg-dark:hover {
+    background-color: #000000 !important;
+    color: #ffffff
+}
+
+.display-img {
+    margin: 20px;
+}
+
+.btn-mt {
+    margin-top: 10px;
+}
+
+.m-3 {
+    margin: 30px;
+}

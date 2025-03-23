@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Ticketing Expert-Admin Documentation</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="description" content="Bootstrap 4 Template For Software Startups">
+	<meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+	<!-- FontAwesome JS-->
+	<script defer src="assets/fontawesome/js/all.min.js"></script>
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+
+	<!-- Theme CSS -->
+	<link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head>
+
+<body class="docs-page">
+	<header class="header fixed-top">
+		<div class="branding docs-branding">
+			<div class="container-fluid position-relative py-2">
+				<div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible mr-2 d-xl-none"
+						type="button">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<div class="site-logo"><a class="navbar-brand" target="none" href="https://saas.ticketing.expert/login"><img class="logo mr-2"
+								src="assets/images/logo.png" alt="logo"></a></div>
+				</div>
+				<!--//docs-logo-wrapper-->
+				<div class="docs-top-utilities d-flex justify-content-end align-items-center">
+					<div class="mr-4 d-none d-md-flex">
+						<span class="mt-2"><a href="user-doc.html">Go to user documentation <i
+									class="fas fa-arrow-circle-right"></i></a></span>
+					</div>
+					<div class="mr-1 d-flex d-md-none">
+						<span class="mt-3 text-center" style="font-size:x-small;"><a href="user-doc.html">Go to user
+								<br> documentation <i class="fas fa-arrow-circle-right"></i></a></span>
+					</div>
+					<a href="https://saas.ticketing.expert/login"
+						class="btn btn-sm btn-primary d-none d-sm-flex" target="none">Home</a>
+				</div>
+				<!--//docs-top-utilities-->
+			</div>
+			<!--//container-->
+		</div>
+		<!--//branding-->
+	</header>
+	<!--//header-->
+
+	<div class="docs-wrapper">
+		<div id="docs-sidebar" class="docs-sidebar">
+			<nav id="docs-nav" class="docs-nav navbar">
+				<ul class="section-items list-unstyled nav flex-column pb-3">
+					<li class="nav-item section-title"><a class="nav-link scrollto" href=""><span
+								class="theme-icon-holder mr-2"><i class="fas fa-user-shield"></i></span>Admin
+							Documentation</a>
+					</li>
+					<hr>
+					<li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
+								class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span>1.
+							Introduction</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span
+								class="theme-icon-holder mr-2"><i class="fas fa-fire"></i></span>2. Dashboard</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span
+								class="theme-icon-holder mr-2"><i class="fas fa-user-shield"></i></span>3. Tenants</a>
+					</li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
+								class="theme-icon-holder mr-2"><i class="fas fa-shopping-cart"></i></span>4. Orders</a>
+					</li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span
+								class="theme-icon-holder mr-2"><i class="fas fa-file-invoice"></i></span>5. Invoices</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">5.1 Invoice Details</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span
+								class="theme-icon-holder mr-2"><i class="fas fa-tags"></i></span>6. Subscriptions</a>
+					</li>
+
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-7"><span
+								class="theme-icon-holder mr-2"><i class="fas fa-users"></i></span>7. User Management</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-1">7.1 Add a User</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-2">7.2 Update a User</a></li>
+
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-8"><span
+								class="theme-icon-holder mr-2"><i class="fas fa-columns"></i></span>8. Plans
+							Management</a>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-1">8.1 Add a Plan</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-2">8.2 Update a Plan</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-3">8.3 Pricing Details</a></li>
+					</li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span
+								class="theme-icon-holder mr-2"><i class="fas fa-credit-card"></i></span>9. Gateways</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-9-1">9.1 PayPal</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-9-2">9.2 Stripe</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-9-3">9.3 Mollie</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-10"><span
+								class="theme-icon-holder mr-2"><i class="fas fa-cogs"></i></span>10. Settings</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-10-1">10.1 Currencies</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-10-2">10.2 Billing Address</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-10-3">10.3 Languages</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-11"><span
+								class="theme-icon-holder mr-2"><i class="fas fa-user-circle"></i></span>11. Profile</a>
+					</li>
+				</ul>
+
+			</nav>
+			<!--//docs-nav-->
+		</div>
+		<!--//docs-sidebar-->
+		<div class="docs-content">
+			<div class="container">
+				<article class="docs-article" id="section-1">
+					<header class="docs-header">
+						<h1 class="docs-heading">Introduction <span class="docs-time">Last updated: 2021-10-01</span>
+						</h1>
+						<section class="docs-intro">
+							<p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+								finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit.
+								Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam
+								lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
+						</section>
+					</header>
+
+					<section class="docs-section" id="item-1-2">
+						<h2 class="section-heading">Section Item 1.2</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis
+							leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis
+							felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio
+							in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec
+							arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+
+						<h5>Image Lightbox Example:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/dashboard-user.png" data-title="Image Lightbox Example"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/dashboard-user.png" alt="" style="width: 600px;"></a>
+							<!-- <figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>Credit: the
+								above screencast is taken from <a class="theme-link"
+									href="https://themes.3rdwavemedia.com/bootstrap-templates/product/appify-bootstrap-4-admin-template-for-app-developers/"
+									target="_blank"><i class="fas fa-external-link-alt"></i>Appify theme</a>.
+							</figcaption> -->
+						</figure>
+
+
+					</section>
+					<!--//section-->
+
+				</article>
+
+				<article class="docs-article" id="section-2">
+					<header class="docs-header">
+						<h1 class="docs-heading">2. Dashboard</h1>
+						<section class="docs-intro">
+
+							<h5>Dashboard view:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/admin/dashboard.png" data-title="Dashboard view"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/admin/dashboard.png" alt="" style="width: 600px;"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.2.1 Dashboard
+								</figcaption>
+							</figure>
+
+							<p>The admin is provided with a dashboard which gives the order statistics, Income
+								statistics and count of Tenants very quickly.
+								<ul>
+									<li>The admin can get the detailed income statistics from the dashboard. It includes
+										total income, current day income, last month income and last yer income
+										separately for each currencies.</li>
+									<li>The count of total orders, total paid orders and total trial orders are given in
+										the dashboard. Last 5 orders are also listed here.</li>
+								</ul>
+							</p>
+						</section>
+						<!--//docs-intro-->
+					</header>
+					<!--//section-->
+				</article>
+				<!--//docs-article-->
+
+				<article class="docs-article" id="section-3">
+					<header class="docs-header">
+						<h1 class="docs-heading">3. Tenants</h1>
+						<section class="docs-intro">
+
+							<h5>List of tenants:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/admin/tenants.png" data-title="List of orders"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/admin/tenants.png" alt="" style="width: 600px;"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.3.1 List of tenants
+								</figcaption>
+							</figure>
+
+							<ul>
+								<li>The admin can get the list of tenants from the "Tenants" link provided in the panel.
+								</li>
+								<li>The admin can get the sub domain, registered user and the current status of the tenant from this page.</li>
+								<li>The link to edit a tenant is provide in each tenant. They can activate or inactivate the tenant from the edit page of the tenant. 
+								</li>
+							</ul>
+
+							</p>
+						</section>
+						<!--//docs-intro-->
+					</header>
+				</article>
+
+				<article class="docs-article" id="section-4">
+					<header class="docs-header">
+						<h1 class="docs-heading">4. Orders</h1>
+						<section class="docs-intro">
+
+							<h5>List of orders:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/admin/orders.png" data-title="List of orders"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/admin/orders.png" alt="" style="width: 600px;"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.4.1 List of orders
+								</figcaption>
+							</figure>
+
+							<ul>
+								<li>The admin can get the order details from the "Orders" link provided in the panel.
+								</li>
+								<li>All the orders are listed here in the order of latest first.</li>
+								<li>The admin can get the order ID, ordered user details, gateway details of the order
+									and the amount details from this page.</li>
+								<li>Orders are created before the payment is completed. So, the admin have to accept
+									each orders after verification. Otherwise users can't use the features properly.
+								</li>
+								<li>The status of orders created without a payment will be "fresh".</li>
+								<li>An order confirm Email will be sent to user's email id after accepting an order.
+								</li>
+							</ul>
+
+							</p>
+						</section>
+						<!--//docs-intro-->
+					</header>
+				</article>
+
+				<article class="docs-article" id="section-5">
+					<header class="docs-header">
+						<h1 class="docs-heading">5. Invoices</h1>
+						<section>
+
+							<h5>List of invoices:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/admin/invoices.png" data-title="List of invoices"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/admin/invoices.png" alt="" style="width: 600px;"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.5.1 List of invoices
+								</figcaption>
+							</figure>
+
+							<ul>
+								<li>The admin can get the list of invoices by clicking the "Invoices" link provided in
+									the
+									panel.</li>
+								<li>From the invoices page, admin can get the order ID and user details associated with
+									the invoice, amount and payment status etc.</li>
+								<li>The admin can filter the invoices by searching with order ID or user name.</li>
+							</ul>
+						</section>
+						<!--//docs-intro-->
+					</header>
+					<section class="docs-section" id="item-5-1">
+						<h2 class="section-heading">5.1 Invoice Details</h2>
+
+						<br>
+						<h5>Invoice details page:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/admin/invoice-details.png" data-title="Invoice details page"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/admin/invoice-details.png" alt="" style="width: 600px;"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.5.2 Invoice details page
+							</figcaption>
+						</figure>
+
+						<ul>
+							<li>The detailed information of an invoice can obtained by clicking on the order IDs
+								provided
+								in each invoices.</li>
+							<li>The admin can get all data associated with the invoice including transaction details and
+								plan details.</li>
+							<li>The admin can refund the full amount of the transaction to users by clicking on the
+								refund button given in this page. The amount will be refunded in the same transaction
+								method of the payment. please confirm all details including bank statement twice before
+								doing this!</li>
+						</ul>
+					</section>
+					<!--//section-->
+				</article>
+				<!--//docs-article-->
+
+				<article class="docs-article" id="section-6">
+					<header class="docs-header">
+						<h1 class="docs-heading">6. Subscriptions</h1>
+						<section class="docs-intro">
+
+							<h5>List of subscriptions:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/admin/services.png" data-title="List of subscriptions"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/admin/services.png" alt="" style="width: 600px;"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.6.1 List of subscriptions
+								</figcaption>
+							</figure>
+
+							<ul>
+								<li>The admin can get the list of subscriptions of users from the "Subscriptions" link
+									provided in the
+									panel.</li>
+								<li>They can obtain the data like order Id associated with the service, user details,
+									plan details and status etc from this page.</li>
+								<li>From the edit page, the admin can change the status of the subscription. Also there
+									is an option to add grace period to a subscription. Note that the grace periode
+									should
+									be added before expiring the subscription.</li>
+								<li>There is search option is provided in this page also. Admin can filter the
+									subscription list by service ID, Order Id and username.</li>
+							</ul>
+						</section>
+						<!--//docs-intro-->
+					</header>
+				</article>
+				<!--//docs-article-->
+
+
+				<article class="docs-article" id="section-7">
+					<header class="docs-header">
+						<h1 class="docs-heading">7. User Management</h1>
+						<section class="docs-intro">
+
+							<h5>List of users:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/admin/users.png" data-title="List of users"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/admin/users.png" alt="" style="width: 600px;"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.7.1 List of users
+								</figcaption>
+							</figure>
+
+							<ul>
+								<li>The admin can get the details of all users registered with the system using "Users"
+									link provided in the panel.</li>
+								<li>They can Add, Edit or Delete the users from this sections. Also they can get the
+									current status of the user.</li>
+								<li>From the listing page admin can search users with their name or Email address.</li>
+							</ul>
+						</section>
+						<!--//docs-intro-->
+					</header>
+					<section class="docs-section" id="item-7-1">
+						<h2 class="section-heading">7.1 Add a User</h2>
+
+						<br>
+						<h5>Add user page:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/admin/user-add.png" data-title="Add user page"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/admin/user-add.png" alt="" style="width: 600px;"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.7.2 Add user page
+							</figcaption>
+						</figure>
+
+						<ul>
+							<li>The admin can add a user by clicking "Add User" link provided in the users page. </li>
+							<li>They should provide first and last name of the user, Email address, password and
+								address details of the user.</li>
+							<li>User have to verify their email address when they login at first time.</li>
+							<li>After adding a user, the default status of user will be "Active". Admin can change this
+								status from update user page accordingly.</li>
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-7-2">
+						<h2 class="section-heading">7.2 Update a User</h2>
+
+						<br>
+						<h5>Update user page:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/admin/user-edit.png" data-title="Update user page"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/admin/user-edit.png" alt="" style="width: 600px;"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.7.3 Update user page
+							</figcaption>
+						</figure>
+
+						<ul>
+							<li>The admin can update a user by clicking on edit link provided in users page.</li>
+							<li>They have to provide their updated details as done in the add section.</li>
+							<li>One extra option will be status. They can update the status of a user from this page.
+							</li>
+						</ul>
+					</section>
+					<!--//section-->
+				</article>
+				<!--//docs-article-->
+
+
+				<article class="docs-article" id="section-8">
+					<header class="docs-header">
+						<h1 class="docs-heading">8. Plans Management</h1>
+						<section class="docs-intro">
+
+							<h5>List of plans:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/admin/plans.png" data-title="List of plans"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/admin/plans.png" alt="" style="width: 600px;"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.8.1 List of plans
+								</figcaption>
+							</figure>
+
+							<ul>
+								<li>The admin can manage the available plans by the "Plans" link provided in the panel.
+								</li>
+								<li>They can Add, Edit or Delete a plan from this page.</li>
+								<li>The green tick and red cross indicates the active and inactive states of the plan
+									respectively.</li>
+							</ul>
+						</section>
+						<!--//docs-intro-->
+					</header>
+					<section class="docs-section" id="item-8-1">
+						<h2 class="section-heading">8.1 Add a Plan</h2>
+
+						<br>
+						<h5>Add plan page:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/admin/plan-add.png" data-title="Add plan page"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/admin/plan-add.png" alt="" style="width: 600px;"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.8.2 Add plan page
+							</figcaption>
+						</figure>
+
+						<ul>
+							<li>The admin can add a plan using "Add Plan" link provided in the plans page.</li>
+							<li>They should provide the name, description, allowed department count, max. number of
+								users, staffs and tickets of the plan in the corresponding area. They can choose
+								unlimited options by checking unlimited checkbox.</li>
+							<li>Plan should be enabled to make it visible to the users.</li>
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-8-2">
+						<h2 class="section-heading">8.2 Update a Plan</h2>
+
+						<br>
+						<h5>Update plan page:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/admin/plan-edit.png" data-title="Update plan page"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/admin/plan-edit.png" alt="" style="width: 600px;"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.8.3 Update plan page
+							</figcaption>
+						</figure>
+
+						<ul>
+							<li>The admin can update a plan using edit link provided in plans page.
+							</li>
+							<li>They should provide the updated details of the plan as done in add section.</li>
+							<li>In addition to that, there is tab provided to add pricing for the selected plan.</li>
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-8-3">
+						<h2 class="section-heading">8.3 Pricing Details</h2>
+
+						<br>
+						<h5>Pricing details:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/admin/pricing.png" data-title="Plan details"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/admin/pricing.png" alt="" style="width: 600px;"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.8.4 Plan details
+							</figcaption>
+						</figure>
+
+						<ul>
+							<li>The admin can add pricing for each plans by clicking pricing link provided in the plan update page.</li>
+							<li>By clicking on it, they can see the list of pricing that already added for the current plan.</li>
+							<li>In this page there are links provided to add or delete pricing of the plan.</li>
+						</ul>
+						<br>
+
+
+						<h3>8.3.1 Add/Update Pricing</h3>
+						<ul>
+							<li>The admin can add pricing for each plans by clicking add link provided in the pricing page.</li>
+							<li>The admin should select a term, periode price and currency for the pricing from here.</li>
+							<li>Admin can also edit or delete thr pricing by clicking curresponding links from pricing page.</li>
+
+							<li>In order to add a pricing, there must be at least one currency added in the currencies page.</li>
+							<br>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/admin/pricing-add.png" data-title="Plan details"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/admin/pricing-add.png" alt="" style="width: 600px;"></a>
+								<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+									Fig.8.5 Add pricing
+								</figcaption>
+							</figure>
+						</ul>
+					</section>
+					<!--//section-->
+				</article>
+				<!--//docs-article-->
+
+				<article class="docs-article" id="section-9">
+					<header class="docs-header">
+						<h1 class="docs-heading">9. Gateways</h1>
+						<section class="docs-intro">
+
+							<h5>List of gateways:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/admin/gateways.png" data-title="List of gateways"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/admin/gateways.png" alt="" style="width: 600px;"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.9.1 List of gateways
+								</figcaption>
+							</figure>
+
+							<ul>
+								<li>The available gateways and it status are listed in the gateways section in admin
+									panel</li>
+								<li>The admin should provide the gateway details for each gateways.</li>
+								<li>There are currently 3 gateways are provided in this version. Paypal, Stripe and
+									Mollie gateways
+								</li>
+								<li>The admin can't add a new gateway to the system. If it required, they have to
+									contact the developer team directly.</li>
+								<li>In-order to activate a gateway, admin should update his billing address in the
+									system. Note that while adding the billing address, you have to provide country that
+									accepts USD currency (Must not be India). Refer section 10.2</li>
+								<li>The green tick and red cross indicates the active and inactive states of the
+									gateways respectively.</li>
+							</ul>
+						</section>
+					</header>
+					<section class="docs-section" id="item-9-1">
+						<h2 class="section-heading">9.1 PayPal</h2>
+
+						<br>
+						<h5>Add PayPal API details:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/admin/gateway-paypal.png" data-title="Add PayPal API details"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/admin/gateway-paypal.png" alt="" style="width: 600px;"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.9.2 Add PayPal API details
+							</figcaption>
+						</figure>
+
+						<ul>
+							<li>PayPal is a secure simple gateway for payments.</li>
+							<li>To activate this gateway in this system, Admin should crate a PayPal account and should
+								provide it's API details in the system.
+							</li>
+							<li>For PayPal you have to provide PayPal Email address, and PayPal API credentials such as
+								API username, API password, and API signature of the account. Note that your details are
+								secure with this system.</li>
+							<li>You can test the payments by enabling the test mode from the system. After the testing,
+								don't forget to turn off the test mode from this section.</li>
+							<li>Also, the admin can enable or disable this gateway from this section. The gateway will
+								not be available for users if it's not activated.</li>
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-9-2">
+						<h2 class="section-heading">9.2 Stripe</h2>
+
+						<br>
+						<h5>Add stripe API details:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/admin/gateway-stripe.png" data-title="Add stripe API details"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/admin/gateway-stripe.png" alt="" style="width: 600px;"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.9.3 Add stripe API details
+							</figcaption>
+						</figure>
+
+						<ul>
+							<li>Stripe is also a secure payment gateway provided in this system.</li>
+							<li>To activate this gateway in this system, Admin should crate a Stripe account and should
+								provide it's API details in the system.
+							</li>
+							<li>For Stripe you have to provide stripe key and stripe secret key of your account. Note
+								that your details are secure with this system.</li>
+							<li>You can test the payments by enabling the test mode from the system. After the testing,
+								don't forget to turn off the test mode from this section.</li>
+							<li>Also, an admin can enable or disable this gateway from this section. The gateway will
+								not be available for users if it's not activated.</li>
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-9-3">
+						<h2 class="section-heading">9.3 Mollie</h2>
+
+						<br>
+						<h5>Add mollie API details:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/admin/gateway-mollie.png" data-title="Add mollie API details"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/admin/gateway-mollie.png" alt="" style="width: 600px;"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.9.4 Add mollie API details
+							</figcaption>
+						</figure>
+
+						<ul>
+							<li>Mollie gateway is also a secure payment gateway provided in this system.</li>
+							<li>To activate this gateway in this system, Admin should crate a Mollie account and should
+								provide it's API details in the system.
+							</li>
+							<li>For Mollie gateway you have to provide mollie key of your account. Note that your
+								details are secure with this system.</li>
+							<li>You can test the payments by enabling the test mode from the system. After the testing,
+								don't forget to turn off the test mode from this section.</li>
+							<li>Also, the admin can enable or disable this gateway from this section. The gateway will
+								not be available for users if it's not activated.</li>
+						</ul>
+					</section>
+					<!--//section-->
+				</article>
+				<!--//docs-article-->
+
+				<article class="docs-article" id="section-10">
+					<header class="docs-header">
+						<h1 class="docs-heading">10. Settings</h1>
+					</header>
+					<section class="docs-section" id="item-10-1">
+						<h2 class="section-heading">10.1 Currencies</h2>
+						<ul>
+							<br>
+							<h5>Currencies:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/admin/currencies.png" data-title="Languages"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/admin/currencies.png" alt="" style="width: 600px;"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.10.1 Currencies
+								</figcaption>
+							</figure>
+
+							<li>User can add, edit or delete currencies from currencies page.</li>
+							<li>They can see the list of available currencies by clicking on Currencies link provided in the panel.
+							</li>
+						</ul>
+						<br>
+
+						<h3>10.1.1 Add/Update Currencies</h3>
+						<ul>
+							<br>
+							<h5>Add Currencies:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/admin/currency-add.png" data-title="Languages"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/admin/currency-add.png" alt="" style="width: 600px;"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.10.2 Currencies
+								</figcaption>
+							</figure>
+
+							<li>The admin can add, edit the currencies by clicking on curresponding links provided in the Currencies page.</li>
+							<li>They should provide currency code as per the standards and prefix of the currency from this page.
+							</li>
+						</ul>
+
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-10-2">
+						<h2 class="section-heading">10.2 Billing Address</h2>
+						<ul>
+							<br>
+							<h5>Billing address page:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/admin/address.png" data-title="Billing address page"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/admin/address.png" alt="" style="width: 600px;"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.10.3 Billing address page
+								</figcaption>
+							</figure>
+
+							<li>The admin should update their billing address in settings before sett-upping the
+								gateways.</li>
+							<li>They have to provide the name nd contact details from this page.</li>
+							<li>Note that while adding the billing address, you have to provide country that accepts USD
+								currency (Must not be India).</li>
+							<br>
+							<h5>Update billing address:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/admin/address-edit.png" data-title="Dashboard view"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/admin/address-edit.png" alt="" style="width: 600px;"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.10.4 Update billing address
+								</figcaption>
+							</figure>
+
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-10-3">
+						<h2 class="section-heading">10.3 Add a Language</h2>
+						<ul>
+							<br>
+							<h5>Languages:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/admin/languages.png" data-title="Languages"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/admin/languages.png" alt="" style="width: 600px;"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.10.5 Languages
+								</figcaption>
+							</figure>
+
+							<li>It is a multilingual system.Admin can add a language to the system by the help of
+								developers.</li>
+							<li>For that, first of all you have to add the language name and language code from Add
+								language option in settings section.
+							</li>
+							<li>Not that the name of the language must be entered in the same language. Example:
+								English, Deutsche..</li>
+							<li>Also, the language code must be a two letter keyword based on ISO 2 letter (Alpha-2
+								code, ISO 639-1) standerd. <br> Eg: en for English.
+								Reference: <a href="https://www.science.co.il/language/Codes.php" target="_blank"
+									rel="noopener noreferrer">
+									Language codes</a>.</li>
+							<li>After that, you have to contact the developer team to set up the translation file.</li>
+						</ul>
+					</section>
+					<!--//section-->
+				</article>
+				<!--//docs-article-->
+
+				<article class="docs-article" id="section-11">
+					<header class="docs-header">
+						<h1 class="docs-heading">11. Profile</h1>
+						<section class="docs-intro">
+
+							<h5>Admin profile:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/admin/admin-profile.png" data-title="Admin profile"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/admin/admin-profile.png" alt="" style="width: 600px;"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.11.1 Admin profile
+								</figcaption>
+							</figure>
+
+							<p>The admin can view or update their profile from the profile section. They can update
+								their
+								user details and login password from here.</p>
+						</section>
+						<!--//docs-intro-->
+					</header>
+				</article>
+				<!--//docs-article-->
+
+				<footer class="footer">
+					<div class="container text-center py-5">
+						<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+						<small class="footer-left">
+							Copyright &copy; 2020 <div class="bullet"></div> A product from <a
+								href="https://modulespanel.com/">Modulespanel.com</a>
+						</small>
+						<br>
+						<small class="footer-right">
+							M.Z 1.0.0
+						</small>
+						<!--//social-list-->
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+	<!--//docs-wrapper-->
+
+
+
+	<!-- Javascript -->
+	<script src="assets/plugins/jquery-3.4.1.min.js"></script>
+	<script src="assets/plugins/popper.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+	<!-- Page Specific JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+	<script src="assets/js/highlight-custom.js"></script>
+	<script src="assets/plugins/jquery.scrollTo.min.js"></script>
+	<script src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>
+	<script src="assets/js/docs.js"></script>
+
+</body>
+
+</html>

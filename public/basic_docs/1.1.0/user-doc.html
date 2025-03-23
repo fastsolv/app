@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Ticketing Expert User Documentation</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="description" content="Ticketing Expert User Documentation">
+	<meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+	<!-- FontAwesome JS-->
+	<script defer src="assets/fontawesome/js/all.min.js"></script>
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+
+	<!-- Theme CSS -->
+	<link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head>
+
+<body class="docs-page">
+	<header class="header fixed-top">
+		<div class="branding docs-branding">
+			<div class="container-fluid position-relative py-2">
+				<div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible mr-2 d-xl-none"
+						type="button">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<div class="site-logo"><a class="navbar-brand" href="https://ticketing.expert/">Ticketing Expert</a></div>
+				</div>
+				<!--//docs-logo-wrapper-->
+				<div class="docs-top-utilities d-flex justify-content-end align-items-center">
+					<div class="mr-4 d-none d-md-flex">
+						<span class="mt-2"><a href="index.html">Go to installation documentation <i
+									class="fas fa-arrow-circle-right"></i></a></span>
+					</div>
+					<div class="mr-1 d-flex d-md-none">
+						<span class="mt-3 text-center" style="font-size:x-small;"><a href="index.html">Go to installation
+								<br> documentation <i class="fas fa-arrow-circle-right"></i></a></span>
+					</div>
+					<a href="https://ticketing.expert/"
+						class="btn btn-sm btn-primary d-none d-md-flex">Home</a>
+				</div>
+				<!--//docs-top-utilities-->
+			</div>
+			<!--//container-->
+		</div>
+		<!--//branding-->
+	</header>
+	<!--//header-->
+
+	<div class="docs-wrapper">
+		<div id="docs-sidebar" class="docs-sidebar">
+			<nav id="docs-nav" class="docs-nav navbar">
+				<ul class="section-items list-unstyled nav flex-column pb-3">
+					<li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
+								class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span>
+							1. Introduction</a></li>
+					<li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-2"><span
+								class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span>
+							2. User Registration</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Reset Password</a></li>
+					<li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-3"><span
+								class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span>
+							3. Profile</a></li>
+					<li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-4"><span
+								class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span>
+							4. User Area</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">4.1 Tickets</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">4.2 Open Ticket</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-3">4.3 Reply Ticket</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-4">4.4 Modify Ticket</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-5">4.5 Add Notes</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-6">4.6 FAQs</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-7">4.7 Knowledge Base</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span
+								class="theme-icon-holder mr-2"><i class="fas fa-server"></i></span>5. Staff Area</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">5.1 Dashboard</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">5.2 Open Tickets</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-3">5.3 Web Tickets</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-4">5.4 Email Tickets</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-5">5.5 My Tickets</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-6">5.6 User Management</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-7">5.7 Email Templates</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-8">5.8 Canned Responses</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-9">5.9 Error Logs</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span
+								class="theme-icon-holder mr-2"><i class="fas fa-globe"></i></span>6. Admin Area</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-6-1">6.1 Dashboard</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-6-2">6.2 Ticket Statuses</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-6-3">6.3 Departments</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-6-4">6.4 Tags</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-6-5">6.5 Staff Management</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-6-6">6.6 Settings</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-6-7">6.7 Languages</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-6-8">6.8 Permissions</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-6-9">6.9 FAQ Categories</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-6-10">6.10 FAQs</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-6-11">6.11 KB Categories</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-6-12">6.12 KB Articles</a></li>
+
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-7"><span
+								class="theme-icon-holder mr-2"><i class="fas fa-globe"></i></span>7. IMAP</a>
+					</li>
+				</ul>
+
+			</nav>
+			<!--//docs-nav-->
+		</div>
+		<!--//docs-sidebar-->
+		<div class="docs-content">
+			<div class="container">
+				<article class="docs-article" id="section-1">
+					<header class="docs-header">
+						<h2 class="docs-heading">Introduction <span class="docs-time">Last updated: 2021-08-01</span>
+						</h2>
+						<section class="docs-intro">
+							<p>Ticketing Expert is a help desk system designed for small to medium sized companies.
+								Customers could open tickets after creating an account, and staffs can reply to the
+								tickets. A user with admin role can create staffs, departments etc.
+							</p>
+							<p>This system could import tickets from email accounts too. Email inbox will be read
+								using IMAP protocol.</p>
+							<p>Major features of the system are
+								<ul>
+									<li>Department wise tickets</li>
+									<li>Private and Internal notes</li>
+									<li>Ticket attachments</li>
+									<li>Import tickets from email using IMAP</li>
+									<li>Staffs to department assignment</li>
+									<li>Email notification for ticket opening and ticket reply</li>
+									<li>Multi language support</li>
+								</ul><br>
+								<h5>Demo Login Details:</h5>
+								Ticketing Expert URL : <a
+									href="https://basic.ticketing.expert/login">basic.ticketing.expert/login</a><br><br>
+								<h6>Admin login details:</h6>
+								Username: admin@modulespanel.com <br>
+								Password : admin1234 <br>
+								Admin can login and then create staffs.
+								A user can login by registering with Ticketing Expert using their Email and password.
+
+							</p>
+
+						</section>
+					</header>
+
+				</article>
+
+				<article class="docs-article" id="section-2">
+					<header class="docs-header">
+						<h2 class="docs-heading">2. User Registration</h2>
+						<section class="docs-intro">
+							<ul>
+								<li>A user have to login to Ticketing Expert to use the system.</li>
+								<li>A new user should register with Ticketing Expert using their Email and password.
+								</li>
+								<li>Go to register section on right top corner of the home page to register.</li>
+								<li>Click on the register button and fill the required fields on the displayed page.
+								</li>
+								<li>Then press Register.</li>
+
+								<br>
+								<h5>User registration:</h5>
+								<figure class="figure docs-figure py-3">
+									<a href="assets/images/user/register.png" data-title="User registration"
+										data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+											src="assets/images/user/register.png" alt="" width="600px"></a>
+									<figcaption class="figure-caption text-center mt-3"><i
+											class="fas fa-info-circle mr-2"></i>
+										Fig.2.1 User registration
+									</figcaption>
+								</figure>
+
+								<li>After registration a verification Email will be sent to registered Email address.
+									User have to verify the Email by clicking on Verify Email Address button.</li>
+								<li>After the verification, the page will be automatically redirected to the dashboard
+									of
+									Ticketing Expert.</li>
+								<li>User can re-login to the system with this Email address and password from the login
+									page.</li>
+
+								<br>
+								<h5>User login:</h5>
+								<figure class="figure docs-figure py-3">
+									<a href="assets/images/user/login.png" data-title="User login"
+										data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+											src="assets/images/user/login.png" alt="" width="600px"></a>
+									<figcaption class="figure-caption text-center mt-3"><i
+											class="fas fa-info-circle mr-2"></i>
+										Fig.2.2 User login
+									</figcaption>
+								</figure>
+							</ul>
+						</section>
+					</header>
+
+					<section class="docs-section" id="item-2-1">
+						<h3 class="section-heading">2.1 Reset Password</h3>
+						<ul>
+							<li>If anyone want to reset their password or have forgotten the password, they can use the
+								forgot password link below the login credentials.</li>
+							<li>After clicking on forgot password link user should provide their registered Email
+								address for receiving the password reset link.</li>
+
+							<br>
+							<h5>Password reset link:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/forgot-password.png" data-title="Password reset link"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/forgot-password.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.2.3 Password reset link
+								</figcaption>
+							</figure>
+
+							<li>A password reset link will be sent to the registered email address of the user.</li>
+							<li>User have to open their Email and click on Password reset button.</li>
+							<li>A page with password reset fields will be opened and user can set their new password.
+							</li>
+
+							<br>
+							<h5>Reset password:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/password-reset.png" data-title="Reset password"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/password-reset.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.2.4 Reset password
+								</figcaption>
+							</figure>
+						</ul>
+					</section>
+					<!--//section-->
+				</article>
+
+				<article class="docs-article" id="section-3">
+					<header class="docs-header">
+						<h2 class="docs-heading">3. Profile</h2>
+						<section class="docs-intro">
+							<ul>
+								<li>To view or update the profile there is a profile button on the top corner of the
+									dashboard.</li>
+								<li>When clicked on the profile button, a page with profile details will be displayed.
+									You can modify your profile details from here.</li>
+								<li>If anyone want to change the password from the profile section, provide the old
+									password and then the new password. Otherwise keep the password fields empty.</li>
+
+								<br>
+								<h5>Profile:</h5>
+								<figure class="figure docs-figure py-3">
+									<a href="assets/images/user/profile.png" data-title="Profile"
+										data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+											src="assets/images/user/profile.png" alt="" width="600px"></a>
+									<figcaption class="figure-caption text-center mt-3"><i
+											class="fas fa-info-circle mr-2"></i>
+										Fig.3.1 Profile
+									</figcaption>
+								</figure>
+							</ul>
+						</section>
+					</header>
+				</article>
+
+				<article class="docs-article" id="section-4">
+					<header class="docs-header">
+						<h2 class="docs-heading">4. User Area</h2>
+					</header>
+					<section class="docs-section" id="item-4-1">
+						<h3 class="section-heading">4.1 Tickets</h3>
+						<ul>
+							<li>The picture below shows the dashboard of user panel in Ticketing Expert.</li>
+							<br>
+							<h5>Tickets:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/dashboard-user.png" data-title="User dashboard"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/dashboard-user.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.4.1 User Dashboard
+								</figcaption>
+							</figure>
+							<li>User can see all the latest tickets from this page.
+							</li>
+							<li>It also provides total count of tickets and count of tickets in different statuses.
+							</li>
+							<li>A link for opening a ticket is provided in this panel.</li>
+							<li>User can search and filter tickets by ticket-id, subject, status, priority and
+								departments.</li>
+							<li>They can view tickets with different statuses separately from this page.</li>
+							<li>Unread tickets will be shown in bold text.</li>
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-4-2">
+						<h3 class="section-heading">4.2 Open Ticket</h3>
+						<ul>
+							<li>As mentioned above, a user can open a ticket using Open Ticket option.</li>
+							<li>To open a ticket, user have to select the department to which they are opening the
+								ticket and the priority of the ticket. Also fill the subject and message and press Add.
+							</li>
+							<li>A user can attach one or more files to the ticket in the allowed formats.</li>
+							<li>Whenever a ticket is opened a mail will be sent to the user’s Email with the ticket
+								number.</li>
+							<br>
+							<h5>Open Ticket:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/open-ticket-user.png" data-title="open_ticket"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/open-ticket-user.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.4.2 Open Ticket
+								</figcaption>
+							</figure>
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-4-3">
+						<h3 class="section-heading">4.3 Reply Ticket</h3>
+						<ul>
+							<li>A user can reply to a ticket by clicking on the subject of the ticket. When a user
+								clicks on a ticket, a panel will be opened as below.</li>
+							<li>Here, user can add replies with or without adding attachments along with it.</li>
+							<li>User can view the ticket and the replies of user and the company staffs.</li>
+							<li>User can delete the ticket reply by clicking on the delete button shown on the
+								right-hand side</li>
+							<li>There is a Modify and Notes option on this panel</li>
+							<li>Whenever a Staff replies to a ticket, User will get a mail to the registered email
+								address indicating that a ticket reply has been added</li>
+							<br>
+							<h5>Reply Ticket:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/ticket-reply-user.png" data-title="Reply Ticket"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/ticket-reply-user.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.4.3 Reply Ticket
+								</figcaption>
+							</figure>
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-4-4">
+						<h3 class="section-heading">4.4 Modify Ticket</h3>
+						<ul>
+							<li>By clicking on the modify link, the user can modify their tickets.</li>
+							<li>They can change the Subject, Priority and the Department to which the ticket is opened.
+							</li>
+							<br>
+							<h5>Modify Ticket:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/ticket-modify-user.png" data-title="Modify Ticket"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/ticket-modify-user.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.4.4 Modify Ticket
+								</figcaption>
+							</figure>
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-4-5">
+						<h3 class="section-heading">4.5 Add Notes</h3>
+						<ul>
+							<li>User can add private notes to their tickets by clicking on the notes link.</li>
+							<li>They can remove notes by clicking on the delete button.</li>
+							<br>
+							<h5>Private Notes:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/ticket-note-user.png" data-title="Add Notes"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/ticket-note-user.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.4.5 Private Notes
+								</figcaption>
+							</figure>
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-4-6">
+						<h3 class="section-heading">4.6 FAQs</h3>
+						<ul>
+							<li>User can check FAQs(Frequently Asked Questions) from the top-bar of their panel or
+								login page.</li>
+							<li>After clicking the FAQs link in top-bar, it will be redirected to FAQs page as shown
+								below.</li>
+							<li>They can check FAQs under each categories from here.</li>
+							<br>
+							<h5>List of FAQs:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/faq-view.png" data-title="Faq" data-toggle="lightbox"><img
+										class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/faq-view.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.4.6 FAQs
+								</figcaption>
+							</figure>
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-4-7">
+						<h3 class="section-heading">4.7 Knowledge Base</h3>
+						<ul>
+							<li>User can check knowledge base from the top-bar of their panel or login page.</li>
+							<li>After clicking the "Knowledge Base" link in top-bar, it will be redirected to KB
+								categories page as shown below.</li>
+							<br>
+							<h5>KB Categories:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/kb-category-list.png" data-title="Dashboard view"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/kb-category-list.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.4.7 KB Categories
+								</figcaption>
+							</figure>
+							<br>
+
+							<li>User can check KB articles under each category by clicking on categories in this page.
+							</li>
+							<li>It will display titles of all KB articles under the selected category. User can click on
+								an article title to display the detailed article as shown below.</li>
+							<br>
+							<h5>KB Article:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/kb-article-view.png" data-title="Dashboard view"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/kb-article-view.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.4.8 KB Article
+								</figcaption>
+							</figure>
+						</ul>
+					</section>
+					<!--//section-->
+				</article>
+				<!--//docs-article-->
+
+				<article class="docs-article" id="section-5">
+					<header class="docs-header">
+						<h2 class="docs-heading">5. Staff Area</h2>
+						<section>
+							<ul>
+								<li>A staff can also do all the works done by the user.</li>
+								<li>Additionally, there are many works that can be done by the staff in the Ticketing
+									Expert which is explained below.</li>
+							</ul>
+						</section>
+					</header>
+					<section class="docs-section" id="item-5-1">
+						<h3 class="section-heading">5.1 Dashboard</h3>
+						<br>
+						<h5>Staff Dashboard:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/user/dashboard-staff.png" data-title="Staff Dashboard"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/user/dashboard-staff.png" alt="" width="600px"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.5.1 Staff Dashboard
+							</figcaption>
+						</figure>
+
+						<ul>
+							<li>The staff is provided with a dashboard which gives detailed information about tickets
+								opened
+								to their departments.</li>
+							<li>It provides total count, count of tickets to be replied and average response time to a
+								ticket which is in their department.</li>
+							<li>It also provides the details of tickets opened each day in the last week and count of
+								tickets in each statuses with the help of maps.</li>
+							<li>It display the latest five tickets opened to their departments.</li>
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-5-2">
+						<h3 class="section-heading">5.2 Open Ticket</h3>
+						<ul>
+							<li>A staff also can open ticket as explained in the user section.</li>
+							<li>But the only difference is that there is an additional field to select the user to which
+								the ticket has to open.</li>
+							<li>When the staff open a ticket, a mail will be sent to user’s Email with the ticket number
+								as explained in the user section. Staff or Admin can disable this mail from <a
+									href="#item-5-7">Email Templates</a> section.</li>
+						</ul>
+					</section>
+					<!--//section-->
+					<section class="docs-section" id="item-5-3">
+						<h3 class="section-heading">5.3 Web Tickets</h3>
+
+						<h5>Web Tickets:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/user/tickets-web.png" data-title="tickets-web"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/user/tickets-web.png" alt="" width="600px"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.5.2 Web Tickets
+							</figcaption>
+						</figure>
+
+						<ul>
+							<li>A staff has separate options to see Web tickets and Email tickets.</li>
+							<li>Web tickets are the tickets opened through Ticketing Expert.</li>
+							<li>They can see subject, status, department and priority of the tickets from this page.
+							</li>
+							<li>Unread tickets will be shown in bold text</li>
+							<li>They can add tags to a ticket and see them below the subject of each ticket.</li>
+							<li>As explained in user section, they can see web tickets in different statuses separately.
+							</li>
+							<li>A staff can only view the tickets opened to their own departments</li>
+							<li>They can filter the tickets by Priority, Status, Departments and Assigned to. Also a
+								search field is provided to filter by ticket id, tags and subject.</li>
+							<li>A staff will get emails on following cases:
+								<ul>
+									<li>When a user open a ticket to their department.</li>
+									<li>When a user, staff or admin add a reply to a ticket that belongs to their
+										department.</li>
+									<li>When a ticket is assigned to him.</li>
+									<li>When a user, staff or admin reply to a ticket that is assigned to him.</li>
+								</ul>
+								Staff or Admin can disable these mails from <a href="#item-5-7">Email Templates</a>
+								section
+							</li>
+						</ul>
+					</section>
+					<!--//section-->
+					<section class="docs-section" id="item-5-3-1">
+						<h4 class="section-heading">5.3.1 Reply Ticket</h4>
+						<ul>
+							<li>The process of replying and adding private notes to the tickets are same as explained in
+								the
+								user section.</li>
+							<li>In addition, admin and staff can use canned responses while replying to a ticket.</li>
+							<li>In the reply page, there will be a dropdown to select canned responses. If a response is
+								selected, the predefined reply will be added to the reply area. You can send this reply
+								by clicking reply button.</li>
+						</ul>
+						<br>
+						<h5>Reply Ticket:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/user/ticket-reply.png" data-title="Reply Ticket"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/user/ticket-reply.png" alt="" width="600px"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.5.3 Reply Ticket
+							</figcaption>
+						</figure>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-5-3-2">
+						<h4 class="section-heading">5.3.2 Modify Ticket</h4>
+						<ul>
+							<li>The staff can also modify the tickets similar to the user.</li>
+							<li>In addition, they can change the status of the tickets and can assign the tickets to
+								different staffs as below.</li>
+							<li>From this page, they can add different tags to a ticket.</li>
+						</ul>
+						<br>
+
+						<h5>Modify Ticket:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/user/ticket-modify.png" data-title="Modify Ticket"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/user/ticket-modify.png" alt="" width="600px"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.5.4 Modify Ticket
+							</figcaption>
+						</figure>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-5-3-3">
+						<h4 class="section-heading">5.3.3 Add Internal Notes</h4>
+						<ul>
+							<li>A staff and admin can add internal notes to a ticket.</li>
+							<li>These notes will be visible to all staffs within the department of that ticket.</li>
+							<li>The main purpose of internal notes is to communicate with the team.</li>
+						</ul>
+						<br>
+
+						<h5>Internal Notes:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/user/ticket-internal-note.png" data-title="Internal Notes"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/user/ticket-internal-note.png" alt="" width="600px"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.5.5 Internal Notes
+							</figcaption>
+						</figure>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-5-4">
+						<h3 class="section-heading">5.4 Email Tickets</h3>
+
+						<h5>Email Tickets:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/user/tickets-email.png" data-title="Email Tickets"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/user/tickets-email.png" alt="" width="600px"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.5.6 Email Tickets
+							</figcaption>
+						</figure>
+
+						<ul>
+							<li>Email tickets are the tickets opened via E-mail.</li>
+							<li>The users who are not registered with ticketing expert will open tickets to the
+								department email address with the help of Email. The staff can view the tickets that
+								belongs to their departments from here.</li>
+							<li>Staff can filter, reply, modify and add internal and private notes to the tickets same
+								as explained in the web tickets section.</li>
+							<li>The reply will be delivered to the user's email address as a reply to their ticket.</li>
+							<li>If a user add a reply mail to the ticket, It will also be shown as the reply to that
+								ticket
+								in the staff's panel</li>
+							<li>They can also see the email tickets with different statuses separately.</li>
+						</ul>
+						<p><b>Note: </b>The Email Tickets option will be shown only if the admin has enabled the <a
+								href="#section-7">IMAP</a> feature in
+							the system.</p>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-5-5">
+						<h3 class="section-heading">5.5 My Tickets</h3>
+
+						<ul>
+							<li>There will be 3 options under My Tickets. Tickets opened by me, Assigned web tickets and
+								Assigned email tickets</li>
+							<li><b>"Tickets Opened By Me"</b> refers to the tickets that are opened by the current
+								staff. They can see all the tickets that are opened by them, including the tickets
+								opened to a different department that does not belong to them.</li>
+							<li><b>"Assigned web tickets"</b> refers to the web tickets that are assigned to the current
+								staff.</li>
+							<li><b>"Assigned email tickets"</b> refers to the email tickets that are assigned to the
+								current
+								staff. As explained earlier, this option will be shown only if the admin has enabled the
+								<a href="#section-7">IMAP</a>
+								feature.</li>
+							<li>They can do all operations to these tickets as same as <a href="#item-5-4">Email
+									tickets</a> and <a href="#item-5-3">Web tickets</a>.</li>
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-5-6">
+						<h3 class="section-heading">5.6 User Management</h3>
+						<ul>
+							<li>The staff can View, Add, Update and delete users by clicking "Users" link in their panel
+							</li>
+							<li>The list of all users will be displayed as shown below. There are links provided to
+								manage users from here.</li>
+							<br>
+							<h5>List of Users:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/users.png" data-title="List of Users"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/users.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.5.7 List of Users
+								</figcaption>
+							</figure>
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-5-6-1">
+						<h4 class="section-heading">5.6.1 Add User</h4>
+						<ul>
+							<li>The staff can add a user by clicking add button provided in the users section. </li>
+							<li>They have to provide Name, Email and Password for registering a user.</li>
+							<li>When the user try to login with this user name and password, they have to verify their
+								email address as explained in the <a href="#section-2">user registration</a> section
+							</li>
+
+							<br>
+							<h5>Add User:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/user-create.png" data-title="Add User"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/user-create.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.5.8 Add User
+								</figcaption>
+							</figure>
+							<br>
+							<li>The staff can update a user by clicking update link provided in the corresponding user.
+							</li>
+							<li>They have to provide the details that should be updated in the required fields.</li>
+							<li>They have to provide the old password in-order to update the password. Otherwise leave
+								it
+								as empty.</li>
+						</ul>
+					</section>
+					<!--//sub section-->
+
+					<section class="docs-section" id="item-5-7">
+						<h3 class="section-heading">5.7 Email Templates</h3>
+						<ul>
+							<li>There are two types of Email Templates- System email templates and Custom email
+								templates.</li>
+							<li>System email templates are used to customize different types of emails associated with
+								the system. And the custom email templates are user defined email templates.</li>
+							<li>System email templates cannot be added in this system, but can be edited.</li>
+							<li>Custom email templates can be added, edited or deleted by the staff or admin.</li>
+
+							<br>
+							<h5>List of Email Templates:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/email_templates.png" data-title="List of Email Templates"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/email_templates.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.5.9 List of Email Templates
+								</figcaption>
+							</figure>
+							<br>
+
+							<li>Available system templates are:</li>
+							<ul>
+								<li>Ticket opened : The mail that is sent to a user when a web ticket is opened.</li>
+								<li>Mail ticket opened : The mail that sent to a user when an email ticket is opened.
+								</li>
+								<li>Ticket reply : The mail that is sent to a user when a reply is added by the admin or
+									staff.</li>
+								<li>Ticket opened department : The mail that is sent to the staffs under a department
+									when
+									a ticket is opened to that department.</li>
+								<li>Department user reply mail : The mail that is sent to the staffs under a department
+									when a user replied to a ticket under that department.</li>
+								<li>Department staff reply mail : The mail that is sent to the staffs under a department
+									when a staff replied to a ticket under that department.</li>
+								<li>Ticket assigned : The email that is sent to a staff when a ticket is assigned to
+									him.
+								</li>
+								<li>Assigned to reply mail : The mail that is sent to ticket assigned staff when the
+									user
+									reply to that ticket.</li>
+							</ul>
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-5-7-1">
+						<h4 class="section-heading">5.6.1 Update Email Template</h4>
+						<ul>
+							<li>The staff or admin can update the email templates by clicking on the update link
+								provided in
+								each template.</li>
+							<li>They have to provide name, language, subject and message of the email according to the
+								format given below.</li>
+							<br>
+							<h5>Update an Email Template:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/email_templates-create.png"
+									data-title="Update an Email Template" data-toggle="lightbox"><img
+										class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/email_templates-create.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.5.10 Update an Email Template
+								</figcaption>
+							</figure>
+							<br>
+							<li>If an email template is disabled, the email will not be sent during the curresponding
+								situation.</li>
+							<li>The available merge fields that are given under the message box can be used in the
+								template
+								according to the given format. For example:</li>
+							<ul>
+								<li>{$ticket_id} -> Ticket ID</li>
+								<li>{$user_name} -> The name of the person to whom the mail is sent.</li>
+								<li>{$subject} -> Subject of the ticket</li>
+								<li>{$department} -> The department to which the ticket is assigned</li>
+								<li>{$ticket_url} -> URL of the ticket</li>
+							</ul>
+						</ul>
+					</section>
+					<!--//sub section-->
+
+					<section class="docs-section" id="item-5-8">
+						<h3 class="section-heading">5.8 Canned Responses</h3>
+						<ul>
+							<li>Canned responses are predetermined responses to tickets.
+							</li>
+							<li>Staff or admin can create canned responses by clicking on "canned responses" link on the
+								panel and can be used when replying to a ticket.</li>
+							<li>The picture shown below is the listing of canned responses. It will have a name and a
+								message.</li>
+							<br>
+							<h5>List of Canned Responses:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/canned-response.png" data-title="List of Canned Responses"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/canned-response.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.5.11 List of Canned Responses
+								</figcaption>
+							</figure>
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-5-8-1">
+						<h4 class="section-heading">5.8.1 Add/Update Canned Responses</h4>
+						<ul>
+							<li>The staff or admin can add or update the canned responses by clicking on the
+								corresponding
+								links provided in the canned responses page.</li>
+							<li>They have to provide a name and body of the message in this page and press add/update.
+								The staff and admin can use them while replying to a ticket.</li>
+							<br>
+							<h5>Add/Update Canned Response:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/canned-response-create.png" data-title="Server details page"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/canned-response-create.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.5.12 Add/Update Canned Response
+								</figcaption>
+							</figure>
+						</ul>
+					</section>
+					<!--//sub section-->
+
+					<section class="docs-section" id="item-5-9">
+						<h3 class="section-heading">5.9 Error Logs</h3>
+						<ul>
+							<li>The staff or admin can see the error logs by clicking on the 'Error Logs" link given in
+								the
+								panel.
+							</li>
+							<li>Errors occurring while validating IMAP and SMTP will be listed with detail.</li>
+							<li>To view the full error message, click on the errors.</li>
+							<br>
+							<h5>Error Logs:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/error-logs.png" data-title="List of error logs"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/error-logs.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.5.13 List of error logs
+								</figcaption>
+							</figure>
+							<br>
+							<h5>View Error Log:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/error-logs-view.png" data-title="List of error logs"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/error-logs-view.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.5.14 Error Log View
+								</figcaption>
+							</figure>
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-5-10">
+						<p><b>Note: </b>Staff can also access <a href="#item-6-3">Departments</a>, <a
+								href="#item-6-2">Ticket Statuses</a>, <a href="#item-6-4">Tags</a> and <a
+								href="#item-6-9">Knowledge Base</a> only if the admin has given permission to them</p>
+					</section>
+				</article>
+				<!--//docs-article-->
+
+				<article class="docs-article" id="section-6">
+					<header class="docs-header">
+						<h2 class="docs-heading">6. Admin Area</h2>
+						<section>
+							<ul class="ml-3">
+								<li>An Admin also can do all the works done by the staff except opening a ticket. They
+									can only View, Reply, Modify, Delete and Add private and internal notes to the
+									tickets.</li>
+								<li>But the difference is that they can view all the tickets in all departments opened
+									by staff and user.</li>
+								<li>Additionally, there are some more options available for admin.</li>
+								<li>Also, My ticket option is not available for admin.</li>
+							</ul>
+							<p><b>Note: </b>The <a href="#item-5-3">Ticket area</a> and some ticket general areas like
+								<a href="#item-5-7">Email templates</a>, <a href="#item-5-8">Canned responses</a> and <a
+									href="#item-5-9">Error logs</a> options of admin is same as
+								staff or user.</p>
+						</section>
+						<!--//docs-intro-->
+					</header>
+					<!--//section-->
+
+					<section class="docs-section" id="item-6-1">
+						<h3 class="section-heading">6.1 Dashboard</h3>
+
+						<h5>Admin Dashboard:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/user/dashboard-admin.png" data-title="Admin Dashboard"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/user/dashboard-admin.png" alt="" width="600px"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.6.1 Admin Dashboard
+							</figcaption>
+						</figure>
+
+						<ul>
+							<li>Admin is provided with a dashboard which gives detailed information about all tickets in
+								the system.</li>
+							<li>It provides total count, count of tickets to be replied and average response time to a
+								ticket which is in the whole system.</li>
+							<li>Ith also provides the details of tickets opened each day in the last week and count of
+								tickets in each statuses with the help of maps.</li>
+							<li>It display the latest five tickets opened to the system.</li>
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-6-2">
+						<h3 class="section-heading">6.2 Ticket Statuses</h3>
+						<ul>
+							<li>An admin can view the included ticket status details as below by clicking on Ticket
+								Statuses link provided in the admin panel.</li>
+							<li>They can View, Add, Edit and Delete a ticket status from this page.</li>
+							<li>Admin can make this option available for staffs by changing the permission from
+								<a href="#item-6-8">Permissions</a> section.</li>
+						</ul>
+						<br>
+						<h5>List of Ticket Statuses:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/user/ticket-status.png" data-title="Ticket Statuses"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/user/ticket-status.png" alt="" width="600px"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.6.2 Ticket Statuses
+							</figcaption>
+						</figure>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-6-2-1">
+						<h4 class="section-heading">6.2.1 Add/Update Ticket Status</h4>
+						<ul>
+							<li>The admin can a add a ticket status by clicking "Add" button in the ticket status page.
+							</li>
+							<li>They have to provide a title, Status colour, and Text color to add a new status.
+							</li>
+							<li>The status color and text color must be in hexa-decimal format. <br>
+								Reference : <a href="https://htmlcolorcodes.com/">Color picker</a></li>
+							<br>
+							<h5>Add Ticket Status:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/ticket-status-add.png" data-title="Add Ticket Status"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/ticket-status-add.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.6.3 Add Ticket Status
+								</figcaption>
+							</figure>
+							<li>To modify or Delete a ticket status click on the modify or delete button given in each
+								statuses.</li>
+							<li>Whenever an admin or staff click on the Modify button, a page with the same fields as
+								above will be displayed. Admin can enter the changes to the field and click Modify
+								button.</li>
+						</ul>
+					</section>
+					<!--//sub section-->
+
+					<section class="docs-section" id="item-6-3">
+						<h3 class="section-heading">6.3 Departments</h3>
+						<ul>
+							<li>An admin can View, Create, Edit and Delete a department by clicking on the "Departments"
+								link in the panel.</li>
+							<li>A page that displays the available departments will be opened when clicking on the
+								"Departments" link.</li>
+							<br>
+
+							<h5>List of Departments:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/department.png" data-title="List of Departments"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/department.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.6.4 List of Departments
+								</figcaption>
+							</figure>
+							<br>
+							<li>From this page admin can Add, Delete or Modify a department.</li>
+							<li>Admin can make this option available for staffs by changing the permission from
+								<a href="#item-6-8">Permissions</a> section.</li>
+						</ul>
+
+						<p><b>Go to <a href="#section-7">SECTION – 7 IMAP</a> to see the case when IMAP feature is
+								enabled.</b></p>
+
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-6-3-1">
+						<h4 class="section-heading">6.3.1 Add/Update Department (IMAP disabled)</h4>
+						<ul>
+							<li>To add a department, click on "Add" button in the departments page.</li>
+							<li>There will be 3 fields called Name, Description, and Email.</li>
+							<li>The Name and Email are mandatory fields, and after filling the required fields press Add
+								button to add a department.</li>
+							<br>
+							<h5>Add Department:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/department-add.png" data-title="Webpage details page"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/department-add.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.6.5 Add Department
+								</figcaption>
+							</figure>
+							<br>
+							<li>To modify the department, click on Modify button in the departments page. A page with
+								same fields as above will be displayed. Edit the required fields and press modify button
+								to modify the department details.</li>
+						</ul>
+					</section>
+					<!--//sub section-->
+
+					<section class="docs-section" id="item-6-4">
+						<h3 class="section-heading">6.4 Tags</h3>
+						<ul>
+							<li>Ticket tags are useful for the purpose of enabling targeted ticket filtering by tags.
+								For example, you could add a tag called "Bug" to quickly see a list of bug tickets.
+							</li>
+							<li>Admin can add custom tags to use in the system from the tags section in the panel.</li>
+							<li>The picture shown below is the listing of tags. There will be different colors to
+								different tags.</li>
+							<li>Admin can make this option available for staffs by changing the permission from
+								<a href="#item-6-8">Permissions</a> section.</li>
+						</ul>
+						<br>
+						<h5>Tags:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/user/tags.png" data-title="List of Tags" data-toggle="lightbox"><img
+									class="figure-img img-fluid shadow rounded" src="assets/images/user/tags.png" alt=""
+									width="600px"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.6.6 List of Tags
+							</figcaption>
+						</figure>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-6-4-2">
+						<h4 class="section-heading">6.4.1 Add/Update Tags</h4>
+						<ul>
+							<li>To add a tag, click on "Add" button in the tags page.</li>
+							<li>Admin have to provide a name, tag color and text color in this page</li>
+							<li>The tag color and text color must be in Hexa-decimal format. <br>
+								Reference : <a href="https://htmlcolorcodes.com/">Color picker</a></li>
+							<br>
+							<h5>Add Tags:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/tags-add.png" data-title="Add a Tag"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/tags-add.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.6.7 Add a Tag
+								</figcaption>
+							</figure>
+							<br>
+							<li>To modify a tag, click on Modify button in the tags page. A page with same fields as
+								above will be displayed. Edit the required fields and press Modify button to modify the
+								tag.</li>
+						</ul>
+					</section>
+					<!--//sub-section-->
+
+					<section class="docs-section" id="item-6-5">
+						<h3 class="section-heading">6.5 Staff Management</h3>
+						<ul>
+							<li>The admin can get the details of all staff registered with the system using "Staffs"
+								link provided in the panel.</li>
+							<li>They can Add, Edit or Delete the staff from this sections.</li>
+							<li>Admin can analyse the performance of staff from this section</li>
+						</ul>
+						<br>
+						<h5>List of Staff:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/user/staffs.png" data-title="List of Staff"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/user/staffs.png" alt="" width="600px"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.6.8 List of Staff
+							</figcaption>
+						</figure>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-6-5-1">
+						<h4 class="section-heading">6.5.1 Add/Update Staff</h4>
+						<ul>
+							<li>The admin can add a staff by clicking "Add" link provided in the staff page.</li>
+							<li>They should provide name, email address and password of the staff.</li>
+							<li>They can assign multiple departments to a staff by checking the checkboxes.</li>
+							<br>
+							<h5>Add Staff:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/staffs-add.png" data-title="Add Staff"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/staffs-add.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.6.9 Add Staff
+								</figcaption>
+							</figure>
+							<br>
+							<li>To modify a staff, click on Modify button in the staff page. A page with same fields as
+								above will be displayed. Edit the required fields and press Modify button to modify the
+								staff.</li>
+							<li>They have to provide old password in order to update the password. Otherwise leave
+								password fields as empty</li>
+						</ul>
+					</section>
+					<!--//sub-section-->
+
+					<section class="docs-section" id="item-6-5-2">
+						<h4 class="section-heading">6.5.2 View Staff</h4>
+						<ul>
+							<li>The admin can get the details of a staff by clicking eye button provided in staff page.
+							</li>
+							<li>They can get basic information of staff, Average response time of a staff to tickets,
+								count of departments and lifetime statistics in each statuses.</li>
+						</ul>
+						<br>
+						<h5>Staff Statistics:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/user/staff-view.png" data-title="Staff Statistics"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/user/staff-view.png" alt="" width="600px"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.6.10 Staff Statistics
+							</figcaption>
+						</figure>
+					</section>
+					<!--//sub-section-->
+
+					<section class="docs-section" id="item-6-6">
+						<h3 class="section-heading">6.6 Settings</h3>
+						<ul>
+							<li>There are 7 settings in settings page- Imap, Attachment extensions, App name, System
+								logo, Footer text, Privacy policy and Terms of use.</li>
+							<li>To change the settings, click the modify link given in each settings.</li>
+							<br>
+							<h5>Settings:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/settings.png" data-title="Settings"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/settings.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.6.11 Settings
+								</figcaption>
+							</figure>
+							<li><b>Imap: </b>This is used to enable or disable Imap feature</li>
+							<li><b>Attachment Extensions:</b>
+								<ul>
+									<li>Used to add attachment extensions to the system.</li>
+									<li>Whenever an attachment is added with tickets or replies, these extension rules
+										are applied.</li>
+									<li>The extensions must be separated by commas.</li>
+									<li>Note that the extension must be in the valid formats.<br>
+										Eg: pdf,jpg,png</li>
+								</ul>
+							</li>
+							<li><b>App Name: </b>This settings is used to customize the App name. This name will be
+								displayed in app bar if there is no logo provided.</li>
+							<li><b>System Logo:</b>
+								<ul>
+									<li>It is used to set a logo to the system</li>
+									<li>The logo must be a transparent image of file type .svg or .png</li>
+								</ul>
+							</li>
+							<li><b>Footer Text: </b>Used to change the footer text of the system.</li>
+							<li><b>Privacy Policy:</b>
+								<ul>
+									<li>Admin can add or update Privacy Policy using this settings.</li>
+									<li>This privacy policy will be displayed in the Privacy policy page.</li>
+									<li>Different styles for texts can be applied when adding privacy policy.</li>
+									<li>Added privacy policy can be accessed from the link provided in the footer of the
+										system.</li>
+								</ul>
+							</li>
+							<li><b>Terms of Use:</b>
+								<ul>
+									<li>Admin can add or update terms of use using this settings.</li>
+									<li>This terms of use will be displayed in the Terms and Conditions page.</li>
+									<li>Different styles for texts can be applied when adding terms of use.</li>
+									<li>Added terms of use can be accessed from the link provided in the footer of the
+										system.</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-6-7">
+						<h3 class="section-heading">6.7 Languages</h3>
+						<ul>
+							<li>To add a language to the system, click on the Add language link on admin area.</li>
+							<li>The language name must be in the same language.</li>
+							<li>The language code must be a two-letter keyword based on ISO 2 letter (Alpha-2 code, ISO
+								639-1) standard. <br>
+								Eg: en for English. <br>
+								Reference: <a href="https://www.science.co.il/language/Codes.php ">Language codes</a>
+							</li>
+							<br>
+							<h5>Languages:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/languages.png" data-title="Manage Languages"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/languages.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.6.12 Manage Languages
+								</figcaption>
+							</figure>
+							<br>
+							<li>After adding the language copy resources/lang/en.json file, paste to the
+								resources/lang/(new language code).json file. And manually translate all codes in that
+								file to new language.</li>
+							<li>Also copy all files in resources/lang/en folder and paste to resources/lang/(new
+								language code) folder and manually translate all codes in that folder to new language.
+								<br>
+								Example for spanish: <br>
+								<code>"Language codes":"Language codes"</code><br>
+								TO <code>"Language codes":"Códigos de idioma"</code>
+
+							</li>
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-6-8">
+						<h3 class="section-heading">6.8 Permissions</h3>
+						<ul>
+							<li>Admin can change permissions of some settings from "Permissions" page</li>
+							<li>They can allow staffs to manage some options like Departments, Tags, Ticket
+								statuses,Knowledge bases.</li>
+							<li>This options will be available in staff panel when admin enables them.</li>
+						</ul>
+						<br>
+						<h5>Permissions:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/user/permissions.png" data-title="Permissions"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/user/permissions.png" alt="" width="600px"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.6.13 Permissions
+							</figcaption>
+						</figure>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-6-9">
+						<h3 class="section-heading">6.9 FAQ Categories</h3>
+						<ul>
+							<li>In-order to add FAQs (Frequently Asked Questions) for users and public, admin should add
+								FAQ categories first.</li>
+							<li>They can add FAQ categories from knowledge base section of admin panel.</li>
+							<li>Admin can make this option available for staffs by changing the knowledge base
+								permission from
+								<a href="#item-6-8">Permissions</a> section.</li>
+							<li>The picture shown below is the listing of FAQ categories</li>
+							<br>
+							<h5>List of FAQ Categories:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/Faq-category.png" data-title="List of FAQ Categories"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/Faq-category.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.6.14 List of FAQ Categories
+								</figcaption>
+							</figure>
+						</ul>
+						</ul>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-6-9-1">
+						<h4 class="section-heading">6.9.1 Add/Update FAQ Category</h4>
+						<ul>
+							<li>Admin can add a FAQ category by clicking "Add" button in FAQ categories page.</li>
+							<li>They have to provide a name for FAQ category and then press add.</li>
+							<br>
+							<h5>Add FAQ Category:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/Faq-category-add.png" data-title="Add FAQ Category"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/Faq-category-add.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.6.15 Add FAQ Category
+								</figcaption>
+							</figure>
+							<br>
+							<li>To modify a FAQ category, click on Modify button in the category page. A page with same
+								fields as
+								above will be displayed. Edit the required fields and press Modify button to modify the
+								category.</li>
+						</ul>
+						</ul>
+					</section>
+					<!--//sub section-->
+
+					<section class="docs-section" id="item-6-10">
+						<h3 class="section-heading">6.10 FAQs</h3>
+						<ul>
+							<li>After adding FAQ categories, Admin should add FAQs(Frequently Asked Questions) under
+								each category from FAQs page</li>
+							<li>Each FAQ would have a question and its answer</li>
+							<li>It will be displayed in the FAQs page in the users and login page</li>
+							<li>Admin can make this option available for staffs by changing the knowledge base
+								permission from
+								<a href="#item-6-8">Permissions</a> section.</li>
+						</ul>
+						<br>
+						<h5>List of FAQs:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/user/faq.png" data-title="List of FAQs"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/user/faq.png" alt="" width="600px"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.6.16 List of FAQs
+							</figcaption>
+						</figure>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-6-10-1">
+						<h4 class="section-heading">6.10.1 Add/Update FAQs</h4>
+						<ul>
+							<li>Admin can add FAQs by clicking "Add" button in FAQs page.</li>
+							<li>They have to select a category first. Then provide the question and its answer in the
+								corresponding fields.</li>
+							<br>
+							<h5>Add a FAQ:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/faq-add.png" data-title="Add a FAQ"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/faq-add.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.6.17 Add a FAQ
+								</figcaption>
+							</figure>
+							<br>
+							<li>To modify a FAQ, click on Modify button in the FAQs page. A page with same fields as
+								above will be displayed. Edit the required fields and press Modify button to modify the
+								FAQ.</li>
+						</ul>
+					</section>
+					<!--//sub section-->
+
+					<section class="docs-section" id="item-6-11">
+						<h3 class="section-heading">6.11 KB Categories</h3>
+						<li>In-order to add KB(Knowledge Base) articles for users and public, admin should add
+							KB categories first.</li>
+						<li>They can add KB categories from knowledge base section of admin panel.</li>
+						<li>Admin can make this option available for staffs by changing the knowledge base permission
+							from
+							<a href="#item-6-8">Permissions</a> section.</li>
+						<li>The picture shown below is the listing of KB categories</li>
+						<br>
+						<h5>List of KB Categories:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/user/kb-category.png" data-title="List of KB Categories"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/user/kb-category.png" alt="" width="600px"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.6.18 List of KB Categories
+							</figcaption>
+						</figure>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-6-11-1">
+						<h4 class="section-heading">6.11.1 Add/Update KB Categories</h4>
+						<ul>
+							<li>Admin can add a KB category by clicking "Add" button in KB categories page.</li>
+							<li>They have to provide a name for KB category, Icon and a description in this page.</li>
+							<li>The icon must be a fontawesome icon. So they have to provide HTML code of fontawesome
+								icons here <br>
+								Reference: <a href="https://fontawesome.com/">Fontawesome.com</a></li>
+							<br>
+							<h5>Add KB Category:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/kb-category-add.png" data-title="Add KB Category"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/kb-category-add.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.6.19 Add KB Category
+								</figcaption>
+							</figure>
+							<br>
+							<li>To modify a KB category, click on Modify button in the category page. A page with same
+								fields as
+								above will be displayed. Edit the required fields and press Modify button to modify the
+								category.</li>
+						</ul>
+					</section>
+					<!--//sub section-->
+
+					<section class="docs-section" id="item-6-12">
+						<h3 class="section-heading">6.12 KB Articles</h3>
+						<ul>
+							<li>After adding KB categories, Admin can add KB articles under each categories.</li>
+							<li>These articles will be displayed to users and public to get a better understanding about
+								the system.</li>
+							<li>It will have title and contents as shown below.</li>
+							<li>Admin can make this option available for staffs by changing the permission from
+								<a href="#item-6-8">Permissions</a> section.</li>
+						</ul>
+						<br>
+						<h5>List of KB Articles:</h5>
+						<figure class="figure docs-figure py-3">
+							<a href="assets/images/user/kb-article.png" data-title="List of KB Articles"
+								data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+									src="assets/images/user/kb-article.png" alt="" width="600px"></a>
+							<figcaption class="figure-caption text-center mt-3"><i class="fas fa-info-circle mr-2"></i>
+								Fig.7.3 List of KB Articles
+							</figcaption>
+						</figure>
+					</section>
+					<!--//section-->
+
+					<section class="docs-section" id="item-6-12-1">
+						<h4 class="section-heading">6.12.1 Add/Update KB Articles</h4>
+						<ul>
+							<li>Admin can add KB articles by clicking "Add" button in KB article page.</li>
+							<li>They have to select a category first. Then provide a title and its contents in the
+								corresponding fields.</li>
+							<li>Additionally, they can provide a Page title, Meta description and Meta keywords for this
+								page.</li>
+							<br>
+							<h5>Add KB Article:</h5>
+							<figure class="figure docs-figure py-3">
+								<a href="assets/images/user/kb-article.-add.png" data-title="Add KB Article"
+									data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/user/kb-article.-add.png" alt="" width="600px"></a>
+								<figcaption class="figure-caption text-center mt-3"><i
+										class="fas fa-info-circle mr-2"></i>
+									Fig.6.3 Add KB Article
+								</figcaption>
+							</figure>
+							<br>
+							<li>To modify a KB article, click on Modify button in the KB article page. A page with same
+								fields as
+								above will be displayed. Edit the required fields and press Modify button to modify the
+								article.</li>
+						</ul>
+					</section>
+					<!--//sub section-->
+				</article>
+				<!--//docs-article-->
+
+				<article class="docs-article" id="section-7">
+					<header class="docs-header">
+						<h2 class="docs-heading">7. IMAP</h2>
+						<section class="docs-intro">
+							<p>This application includes the IMAP feature. IMAP (Internet Message Access Protocol)
+								feature allows to read tickets from this application that is opened through Email. You
+								can
+								reply to the ticket from the application and will be delivered to the user’s mail as a
+								reply to their tickets.</p>
+							<ul>
+								<li>To enable the IMAP feature, admin should go to the settings and enable it.</li>
+								<li>When the admin press edit link of IMAP settings, a page that will allow him to
+									enable or
+									disable the IMAP feature will be displayed as below.</li>
+								<br>
+								<h5>Enable IMAP:</h5>
+								<figure class="figure docs-figure py-3">
+									<a href="assets/images/user/settings-imap.png" data-title="Enable IMAP"
+										data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+											src="assets/images/user/settings-imap.png" alt="" width="600px"></a>
+									<figcaption class="figure-caption text-center mt-3"><i
+											class="fas fa-info-circle mr-2"></i>
+										Fig.7.1 Enable IMAP
+									</figcaption>
+								</figure>
+								<br>
+								<li>After enabling the IMAP feature, go to departments section and add or update
+									departments
+									with IMAP server details and SMTP details.</li>
+								<li>The add and edit department page will be changed to the below format if the IMAP
+									feature is enabled.</li>
+								<li>Admin and Staff(If permitted by admin) can change the department details</li>
+								<br>
+								<h5>Add IMAP Details:</h5>
+								<figure class="figure docs-figure py-3">
+									<a href="assets/images/user/department-add-imap.png" data-title="Add IMAP Details"
+										data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+											src="assets/images/user/department-add-imap.png" alt="" width="600px"></a>
+									<figcaption class="figure-caption text-center mt-3"><i
+											class="fas fa-info-circle mr-2"></i>
+										Fig.7.2 Add IMAP Details
+									</figcaption>
+								</figure>
+								<br>
+								<li>In the Add department page, provide only valid IMAP server details and SMTP details.
+									Otherwise IMAP function will not work.</li>
+								<li>Use different Email and name for different departments. Tickets that opened to a
+									specific department Email will be visible to Admin and staff in that department.
+								</li>
+								<li>After providing the required details press the add button. The added departments
+									will be listed as below.</li>
+
+								<br>
+								<h5>List of Departments:</h5>
+								<figure class="figure docs-figure py-3">
+									<a href="assets/images/user/departments(IMAP).png" data-title="List of Departments"
+										data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+											src="assets/images/user/departments(IMAP).png" alt="" width="600px"></a>
+									<figcaption class="figure-caption text-center mt-3"><i
+											class="fas fa-info-circle mr-2"></i>
+										Fig.7.3 List of Departments
+									</figcaption>
+								</figure>
+								<br>
+
+								<li>Wait for maximum of 5 minutes to validate the IMAP and SMTP details.</li>
+								<li>After that refresh this page. IMAP status and SMTP status will become active only if
+									the IMAP and SMTP details are verified. Otherwise go to the Error logs to see the
+									error message.</li>
+								<li>There will be a separate link for IMAP tickets(as Email Tickets) in the navbar for
+									staffs and admin. By clicking that link the tickets opened through Email are listed.
+									Refer <a href="#item-5-3">Email Tickets</a> section to know more about IMAP tickets
+								</li>
+								<br>
+								<h5>List of Email Tickets:</h5>
+								<figure class="figure docs-figure py-3">
+									<a href="assets/images/user/tickets-email.png" data-title="List of Email Tickets"
+										data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+											src="assets/images/user/tickets-email.png" alt="" width="600px"></a>
+									<figcaption class="figure-caption text-center mt-3"><i
+											class="fas fa-info-circle mr-2"></i>
+										Fig.7.4 List of Email Tickets
+									</figcaption>
+								</figure>
+								<br>
+
+								<li>By clicking on the tickets staff or admin can reply, modify and add private and
+									internal notes to the tickets.</li>
+								<br>
+								<h5>Reply Email Ticket:</h5>
+								<figure class="figure docs-figure py-3">
+									<a href="assets/images/user/email-ticket-reply.png" data-title="Reply Email Ticket"
+										data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
+											src="assets/images/user/email-ticket-reply.png" alt="" width="600px"></a>
+									<figcaption class="figure-caption text-center mt-3"><i
+											class="fas fa-info-circle mr-2"></i>
+										Fig.7.5 Reply Email Ticket
+									</figcaption>
+								</figure>
+								<br>
+
+								<li>When a staff or admin reply to the ticket, the reply will be sent to user’s mail and
+									will be visible as a reply to their tickets.</li>
+								<li>Also, when the user make a reply to the ticket from their Email, it will be visible
+									as a reply to the ticket on the admin and staff panel.</li>
+
+							</ul>
+						</section>
+						<!--//docs-intro-->
+					</header>
+
+				</article>
+
+				<footer class="footer">
+					<div class="container text-center py-5">
+						<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+						<small class="footer-left">
+							Copyright &copy; 2020 <div class="bullet"></div> A product from <a
+								href="https://modulespanel.com/">Modulespanel.com</a>
+						</small>
+						<br>
+						<small class="footer-right">
+							T.E 1.1.0
+						</small>
+						<!--//social-list-->
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+	<!--//docs-wrapper-->
+
+
+
+	<!-- Javascript -->
+	<script src="assets/plugins/jquery-3.4.1.min.js"></script>
+	<script src="assets/plugins/popper.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+	<!-- Page Specific JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+	<script src="assets/js/highlight-custom.js"></script>
+	<script src="assets/plugins/jquery.scrollTo.min.js"></script>
+	<script src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>
+	<script src="assets/js/docs.js"></script>
+
+</body>
+
+</html>

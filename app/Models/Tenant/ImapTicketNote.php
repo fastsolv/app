@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Models\Tenant;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class ImapTicketNote extends Model
+{
+    protected $primaryKey = 'uuid';
+    public $incrementing = false;
+    
+    use HasFactory;
+
+    public function noteUser()
+    {
+        return $this->belongsTo(\App\Models\User::class, 'note_staff_id');
+    }
+}

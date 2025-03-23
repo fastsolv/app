@@ -1,0 +1,41 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateFaqTranslationsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('faq_translations', function (Blueprint $table) {
+            $table->uuid('uuid');
+            $table->primary('uuid');
+
+            $table->uuid('faq_id');
+            $table->foreign('faq_id')->references('uuid')->on('faqs')->onDelete('cascade');
+
+            $table->integer('language_id');
+            $table->longText('question');
+            $table->binary('answer');
+            $table->string('status')->default(0);
+                
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('faq_translations');
+    }
+}

@@ -1,0 +1,115 @@
+@extends( 
+        ($theme =="white") ? 'tenant.layouts.white_theme':
+     ( ($theme =="red") ? 'tenant.layouts.red_theme':
+    (($theme =="green") ? 'tenant.layouts.green_theme':
+    (($theme =="black") ? 'tenant.layouts.black_theme':
+   ( ($theme =="blue") ?'tenant.layouts.blue_theme': 'tenant.layouts.yellow_theme' ))))
+    )
+
+@section('content')
+
+<div class="section-header shadow-none">
+    <h1>{{ __('Roles') }}</h1>
+    <div class="section-header-breadcrumb">
+        <div class="breadcrumb-item active"><a href="{{ route('dashboard') }}">{{ __('Dashboard') }}</a></div>
+        <div class="breadcrumb-item">{{ __('Roles') }}</div>
+    </div>
+</div>
+
+<div class="section-body">
+    <div class="row">
+        <div class="col-12">
+            @include('common.demo')
+            @include('common.errors')
+            <div class="card">
+                <div class="card-header">
+                    <small id='main'>
+                        <a href="{{ route('roles.create') }}"
+                            class="btn btn-custom  float-right add_button">{{__('Add')}}</a>
+                    </small>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        @if (!count($roles))
+                        <div class="empty-state pt-3" data-height="400">
+                            <div class="empty-state-icon bg-danger">
+                                <i class="fas fa-question"></i>
+                            </div>
+                            <h2>{{ __('No data found') }} !!</h2>
+                            <p class="lead">
+                                {{ __('Sorry we cant find any data, to get rid of this message, make at least 1 entry') }}.
+                            </p>
+                            <a href="{{ route('roles.create') }}"
+                                class="btn btn-custom mt-4">{{ __('Create new One') }}</a>
+                        </div>
+                        @else
+                        <table class="table table-striped" id="table-1">
+                            <thead>
+                                <tr class="text-center text-capitalize">
+                                <th> <a  class ="text-secondary text-decoration-none font-weight-bold" href="{{ route('get_roles',['name' => 'name' ,'order'=>$sort_order]) }}">{{ __(' Name') }}
+                                         <span> @if($sort_order =='asc') 
+                                            <i  class=" fa fa-sort-alpha-up mt-1 float-right  "></i>
+                                             @else
+                                             <i  class=" mt-1 float-right   fa fa-sort-alpha-down  "></i>
+                                             @endif
+                                        </span>
+                                    </a></th>
+                                    <th> <a  class ="text-secondary text-decoration-none font-weight-bold" href="{{ route('get_roles',['name' => 'description' ,'order'=>$sort_order]) }}">{{ __('Description') }}
+                                         <span> @if($sort_order =='asc') 
+                                            <i  class=" fa fa-sort-alpha-up mt-1 float-right  "></i>
+                                             @else
+                                             <i  class=" mt-1 float-right   fa fa-sort-alpha-down  "></i>
+                                             @endif
+                                        </span>
+                                    </a></th>
+                                    <th><a  class ="text-secondary text-decoration-none font-weight-bold" href="{{ route('get_roles',['name' => 'status' ,'order'=>$sort_order]) }}">{{ __('Status') }} 
+                                        <span> @if($sort_order =='asc') 
+                                                <i  class=" fa fa-sort-alpha-up mt-1 float-right  "></i>
+                                                    @else
+                                                    <i  class=" mt-1 float-right   fa fa-sort-alpha-down  "></i>
+                                                    @endif
+                                        </span></a></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($roles as $role)
+                                <tr>
+                                    <td class="text-capitalize">{{$role->name}}</td>
+                                    <td>{{$role->description}} </td>
+                                     @if (($role->status) == true)
+                                    <td class="text-success">{{ __('Active') }}</td>
+                                      @else
+                                    <td class="text-danger">{{ __('Inactive') }}</td>
+                                    @endif
+                                    <td class="justify-content-center form-inline">
+                                    <a href="{{ route('role_permission.show', [$role->uuid]) }}" 
+                                            class="btn btn-sm bg-transparent"><i class="fas fa-user-lock text-primary" aria-hidden="true"
+                                                 title="{{ __('Permission') }}"></i></a>
+                                        <a href="{{ route('roles.edit', [$role->uuid]) }}"
+                                            class="btn btn-sm bg-transparent"><i class="far fa-edit text-primary"
+                                                aria-hidden="true" title="{{ __('Edit') }}"></i></a>
+                                        <form action="{{ route('roles.destroy', [$role->uuid]) }}"
+                                            method="POST">
+                                            @method('DELETE')
+                                            @csrf
+                                            <button class="btn btn-sm bg-transparent"
+                                                onclick="return confirm('Are you sure?')">
+                                                <i class="fa fa-trash text-danger" aria-hidden="true"
+                                                    title="{{ __('Delete') }}"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                        <br>
+                        @endif
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
