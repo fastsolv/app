@@ -12,10 +12,6 @@
   <!-- Fav Icon -->
   <link rel="icon" type="image/x-icon" href="../{{ asset('sassly/imgs/logo/favicon.webp') }}">
 
-
-
-
-
   <!-- All CSS files -->
   <link rel="stylesheet" href="{{ asset('sassly/css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ asset('sassly/css/all.min.css') }}">
@@ -25,8 +21,11 @@
   <link rel="stylesheet" href="{{ asset('sassly/css/magnific-popup.css') }}">
   <link rel="stylesheet" href="{{ asset('sassly/css/master-customer-service.css') }}">
 
-
-
+  <style>
+    .user-brand img{
+      max-width: 60%;
+    }
+  </style>
 
 </head>
 
@@ -39,12 +38,14 @@
       <div class="animation-preloader">
         <div class="spinner"></div>
         <div class="txt-loading">
-          <span data-text="S" class="characters">S</span>
-          <span data-text="A" class="characters">A</span>
-          <span data-text="S" class="characters">S</span>
-          <span data-text="S" class="characters">S</span>
-          <span data-text="L" class="characters">L</span>
-          <span data-text="Y" class="characters">Y</span>
+            <span data-text="F" class="characters">F</span>
+            <span data-text="A" class="characters">A</span>
+            <span data-text="S" class="characters">S</span>
+            <span data-text="T" class="characters">T</span>
+            <span data-text="S" class="characters">S</span>
+            <span data-text="O" class="characters">O</span>
+            <span data-text="L" class="characters">L</span>
+            <span data-text="V" class="characters">V</span>
         </div>
       </div>
       <div class="loader-section section-left"></div>
