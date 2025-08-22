@@ -26,3 +26,4 @@ composer.lock
 .DS_Store
 .idea
 .nvmrc
+storage
